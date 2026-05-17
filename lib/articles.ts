@@ -12,6 +12,8 @@ export type Article = {
   image: {
     src: string;
     alt: string;
+    credit: string;
+    creditUrl: string;
   };
   keywords: string[];
   standfirst: string;
@@ -38,8 +40,11 @@ export const articles: Article[] = [
     readTime: "7 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/enterprise-ai-orbit.svg",
-      alt: "Abstract orbital data rings around a bright enterprise AI core",
+      src: "/articles/source-photos/enterprise-ai-service-businesses.jpg",
+      alt: "Rows of server racks inside a data center",
+      credit: "Carl Lender / Wikimedia Commons",
+      creditUrl:
+        "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg",
     },
     keywords: ["enterprise AI", "AI services", "automation strategy", "AI startups"],
     standfirst:
@@ -83,8 +88,11 @@ export const articles: Article[] = [
     readTime: "6 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/ai-chip-map.svg",
-      alt: "Glowing processor grid floating over a deep space field",
+      src: "/articles/source-photos/ai-chip-challengers.jpg",
+      alt: "A semiconductor wafer photographed close up",
+      credit: "DrHughManning / Wikimedia Commons",
+      creditUrl:
+        "https://commons.wikimedia.org/wiki/File:Semiconductor_Wafer_of_Microelectronics.jpg",
     },
     keywords: ["AI chips", "semiconductors", "inference", "data center hardware"],
     standfirst:
@@ -128,8 +136,10 @@ export const articles: Article[] = [
     readTime: "6 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/defense-autonomy-grid.svg",
-      alt: "Satellite-like autonomy paths crossing a golden tactical grid",
+      src: "/articles/source-photos/defense-startups-platform.jpg",
+      alt: "An MQ-9 Reaper unmanned aircraft in flight",
+      credit: "U.S. Air Force / Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:MQ-9_Reaper_UAV.jpg",
     },
     keywords: ["defense tech", "autonomous systems", "dual use startups", "procurement"],
     standfirst:
@@ -173,8 +183,10 @@ export const articles: Article[] = [
     readTime: "5 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/security-shield-nebula.svg",
-      alt: "Luminous security shield over a green nebula network",
+      src: "/articles/source-photos/ai-security-shadow-tool.jpg",
+      alt: "A laptop secured with a chain and padlock",
+      credit: "Santeri Viinamaki / Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Locked_computer_laptop.jpg",
     },
     keywords: ["AI security", "shadow AI", "cybersecurity", "agent governance"],
     standfirst:
@@ -218,8 +230,10 @@ export const articles: Article[] = [
     readTime: "8 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/search-signal-constellation.svg",
-      alt: "Constellation of search signals connected across a violet star field",
+      src: "/articles/source-photos/search-visibility.jpg",
+      alt: "A person using a laptop to search the web",
+      credit: "Panelxf / Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Laptop_Google_Search.jpg",
     },
     keywords: ["search visibility", "AI search", "content strategy", "structured data"],
     standfirst:
@@ -263,8 +277,11 @@ export const articles: Article[] = [
     readTime: "6 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/product-interface-orbit.svg",
-      alt: "Clean product interface panels orbiting a coral AI system",
+      src: "/articles/source-photos/ai-apps-product-interface.jpg",
+      alt: "People working around laptops at a technology workshop",
+      credit: "Code for America / Wikimedia Commons",
+      creditUrl:
+        "https://commons.wikimedia.org/wiki/File:Code_for_America,_San_Francisco_(16870624273).jpg",
     },
     keywords: ["AI product design", "AI UX", "agentic workflows", "software design"],
     standfirst:
@@ -308,8 +325,10 @@ export const articles: Article[] = [
     readTime: "6 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/data-center-power.svg",
-      alt: "Quiet data-center blocks connected to a power grid in deep space",
+      src: "/articles/source-photos/data-centers-power.jpg",
+      alt: "Power distribution controls and switches on a control panel",
+      credit: "Sam Howzit / Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Power_Distribution_Control.jpg",
     },
     keywords: ["data centers", "AI infrastructure", "power grid", "cloud computing"],
     standfirst:
@@ -353,8 +372,11 @@ export const articles: Article[] = [
     readTime: "7 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/open-source-stack.svg",
-      alt: "Layered open-source software blocks arranged like a quiet orbital stack",
+      src: "/articles/source-photos/open-source-ai-stack.jpg",
+      alt: "Code displayed on a computer monitor",
+      credit: "Markus Spiske / Unsplash",
+      creditUrl:
+        "https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg",
     },
     keywords: ["open source AI", "AI infrastructure", "developer tools", "model operations"],
     standfirst:
@@ -398,8 +420,10 @@ export const articles: Article[] = [
     readTime: "6 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/warehouse-robots.svg",
-      alt: "Minimal warehouse robotics lanes drawn as muted orbital paths",
+      src: "/articles/source-photos/warehouse-robots-software.jpg",
+      alt: "Warehouse robots moving across an automated storage grid",
+      credit: "Ocado / Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Ocado_warehouse_bots.jpg",
     },
     keywords: ["warehouse robotics", "automation", "supply chain", "robot software"],
     standfirst:
@@ -443,8 +467,10 @@ export const articles: Article[] = [
     readTime: "6 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/browser-agents.svg",
-      alt: "Browser window panels arranged in a restrained space interface",
+      src: "/articles/source-photos/browser-agents-enterprise.jpg",
+      alt: "A browser address bar showing a secure connection",
+      credit: "Yuri Samoilov / Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Https_Browser_(66747481).jpeg",
     },
     keywords: ["browser agents", "enterprise automation", "AI agents", "workflow software"],
     standfirst:
@@ -488,8 +514,10 @@ export const articles: Article[] = [
     readTime: "7 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/grid-software.svg",
-      alt: "Muted energy grid nodes arranged across a dark technical map",
+      src: "/articles/source-photos/grid-software-climate.jpg",
+      alt: "High-voltage electricity pylons and power lines at dusk",
+      credit: "analogicus / Pixabay",
+      creditUrl: "https://pixabay.com/photos/electricity-electricity-pylons-4666566/",
     },
     keywords: ["grid software", "climate tech", "energy storage", "renewable energy"],
     standfirst:
@@ -533,8 +561,10 @@ export const articles: Article[] = [
     readTime: "5 min",
     accent: "bg-slate-400",
     image: {
-      src: "/articles/personal-ai-hardware.svg",
-      alt: "Minimal personal device silhouettes floating on a dark reading-focused backdrop",
+      src: "/articles/source-photos/personal-ai-hardware.jpg",
+      alt: "Tabletop devices including glasses, a phone, and tablets",
+      credit: "MyssLisaMarie / Pixabay",
+      creditUrl: "https://pixabay.com/photos/glasses-technology-wearable-2172280/",
     },
     keywords: ["AI hardware", "consumer devices", "wearables", "personal AI"],
     standfirst:

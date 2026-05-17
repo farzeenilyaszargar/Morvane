@@ -57,6 +57,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       card: "summary_large_image",
       title: article.title,
       description: article.dek,
+      images: [article.image.src],
     },
   };
 }
@@ -120,15 +121,25 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </h1>
                 <p className="mt-7 max-w-3xl text-xl leading-8 text-slate-200">{article.dek}</p>
               </div>
-              <div className="relative min-h-72 overflow-hidden border border-white/15 bg-[#0b111d] ">
-                <Image
-                  src={article.image.src}
-                  alt={article.image.alt}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 340px, 100vw"
-                  className="cover-image object-cover"
-                />
+              <div>
+                <div className="relative min-h-72 overflow-hidden border border-white/15 bg-[#0b111d] ">
+                  <Image
+                    src={article.image.src}
+                    alt={article.image.alt}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 340px, 100vw"
+                    className="cover-image object-cover"
+                  />
+                </div>
+                <a
+                  href={article.image.creditUrl}
+                  className="mt-3 block font-mono text-[0.65rem] font-bold uppercase tracking-[0.12em] text-slate-500 transition hover:text-slate-300"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Image: {article.image.credit}
+                </a>
               </div>
             </div>
           </header>

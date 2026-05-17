@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     siteName: "Morvane",
     images: [
       {
-        url: "/articles/enterprise-ai-orbit.svg",
-        alt: "Morvane technology magazine cover image",
+        url: "/articles/source-photos/enterprise-ai-service-businesses.jpg",
+        alt: "Morvane technology magazine cover photo",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Morvane | Space-Age Technology Magazine",
     description:
       "A clean, dark technology magazine for AI, startups, cybersecurity, chips, and product strategy.",
-    images: ["/articles/enterprise-ai-orbit.svg"],
+    images: ["/articles/source-photos/enterprise-ai-service-businesses.jpg"],
   },
 };
 
