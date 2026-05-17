@@ -9,7 +9,6 @@ export type Article = {
   publishedAt: string;
   readTime: string;
   accent: string;
-  theme: string;
   image: {
     src: string;
     alt: string;
@@ -38,7 +37,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-17",
     readTime: "7 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/enterprise-ai-orbit.svg",
       alt: "Abstract orbital data rings around a bright enterprise AI core",
@@ -84,7 +82,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-17",
     readTime: "6 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/ai-chip-map.svg",
       alt: "Glowing processor grid floating over a deep space field",
@@ -130,7 +127,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-16",
     readTime: "6 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/defense-autonomy-grid.svg",
       alt: "Satellite-like autonomy paths crossing a golden tactical grid",
@@ -176,7 +172,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-15",
     readTime: "5 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/security-shield-nebula.svg",
       alt: "Luminous security shield over a green nebula network",
@@ -222,7 +217,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-14",
     readTime: "8 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/search-signal-constellation.svg",
       alt: "Constellation of search signals connected across a violet star field",
@@ -268,7 +262,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-13",
     readTime: "6 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/product-interface-orbit.svg",
       alt: "Clean product interface panels orbiting a coral AI system",
@@ -314,7 +307,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-12",
     readTime: "6 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/data-center-power.svg",
       alt: "Quiet data-center blocks connected to a power grid in deep space",
@@ -360,7 +352,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-11",
     readTime: "7 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/open-source-stack.svg",
       alt: "Layered open-source software blocks arranged like a quiet orbital stack",
@@ -406,7 +397,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-10",
     readTime: "6 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/warehouse-robots.svg",
       alt: "Minimal warehouse robotics lanes drawn as muted orbital paths",
@@ -452,7 +442,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-09",
     readTime: "6 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/browser-agents.svg",
       alt: "Browser window panels arranged in a restrained space interface",
@@ -498,7 +487,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-08",
     readTime: "7 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/grid-software.svg",
       alt: "Muted energy grid nodes arranged across a dark technical map",
@@ -544,7 +532,6 @@ export const articles: Article[] = [
     publishedAt: "2026-05-07",
     readTime: "5 min",
     accent: "bg-slate-400",
-    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
     image: {
       src: "/articles/personal-ai-hardware.svg",
       alt: "Minimal personal device silhouettes floating on a dark reading-focused backdrop",
