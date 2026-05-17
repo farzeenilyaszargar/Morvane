@@ -215,7 +215,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="border border-white/10 bg-[#0b111d] p-5">
+            <div id="newsletter" className="border border-white/10 bg-[#0b111d] p-5">
               <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
                 Newsletter
               </p>
@@ -244,9 +244,8 @@ export default function Home() {
         </section>
 
         <footer className="border-t border-white/10 bg-black/30">
-          <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-8 font-mono text-xs font-bold uppercase tracking-[0.14em] text-slate-400 sm:px-8 md:flex-row md:items-center md:justify-between">
+          <div className="mx-auto flex max-w-7xl px-5 py-8 text-sm text-slate-500 sm:px-8">
             <p>Morvane covers technology from the edge of the map.</p>
-            <p>morvane.space</p>
           </div>
         </footer>
       </div>

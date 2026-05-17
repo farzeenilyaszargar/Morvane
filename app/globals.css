@@ -28,19 +28,11 @@ body {
 }
 
 .space-field {
-  background:
-    radial-gradient(circle at 16% 14%, rgba(95, 117, 148, 0.1), transparent 30%),
-    radial-gradient(circle at 84% 6%, rgba(80, 89, 128, 0.12), transparent 28%),
-    linear-gradient(180deg, #070910 0%, #0a0e17 48%, #070910 100%);
+  background: #070910;
 }
 
 .star-noise {
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1.4px);
-  background-position:
-    0 0;
-  background-size:
-    92px 92px;
+  background: #070910;
 }
 
 .pixel-logo {
