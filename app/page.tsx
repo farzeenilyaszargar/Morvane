@@ -211,23 +211,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-b border-white/10 bg-black/20">
-          <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:px-8 lg:grid-cols-4">
-            {["Agent governance", "Inference cost", "Defense autonomy", "AI product design"].map(
-              (topic, index) => (
-                <div key={topic} className="flex items-center gap-3">
-                  <span className="grid size-9 place-items-center border border-cyan-200/40 bg-cyan-200/10 font-mono text-sm font-black text-cyan-100">
-                    {index + 1}
-                  </span>
-                  <span className="font-mono text-xs font-black uppercase tracking-[0.14em] text-slate-300">
-                    {topic}
-                  </span>
-                </div>
-              ),
-            )}
-          </div>
-        </section>
-
         <section className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[1fr_320px]">
           <div>
             <div className="mb-6 flex items-end justify-between gap-4">
