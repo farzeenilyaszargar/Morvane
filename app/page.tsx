@@ -67,9 +67,103 @@ function ArticleMeta({
   );
 }
 
+function SectionHeading({
+  eyebrow,
+  title,
+  copy,
+}: {
+  eyebrow: string;
+  title: string;
+  copy?: string;
+}) {
+  return (
+    <div className="mb-6">
+      <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+        {eyebrow}
+      </p>
+      <h2 className="mt-2 text-4xl font-black leading-none text-slate-50 sm:text-5xl">
+        {title}
+      </h2>
+      {copy ? <p className="mt-3 max-w-2xl leading-7 text-slate-400">{copy}</p> : null}
+    </div>
+  );
+}
+
+function StoryRow({ article }: { article: (typeof articles)[number] }) {
+  return (
+    <Link
+      key={article.slug}
+      href={`/articles/${article.slug}`}
+      className="group grid gap-5 border border-white/10 bg-white/[0.035] p-5 transition hover:border-slate-300/30 hover:bg-white/[0.05] sm:grid-cols-[150px_1fr]"
+    >
+      <ArticleVisual accent={article.accent} src={article.image.src} alt={article.image.alt} />
+      <div>
+        <ArticleMeta category={article.category} date={article.date} readTime={article.readTime} />
+        <h3 className="mt-3 text-2xl font-black leading-tight text-slate-50 group-hover:text-slate-200">
+          {article.title}
+        </h3>
+        <p className="mt-3 leading-7 text-slate-400">{article.excerpt}</p>
+      </div>
+    </Link>
+  );
+}
+
+function CompactStory({ article }: { article: (typeof articles)[number] }) {
+  return (
+    <Link
+      href={`/articles/${article.slug}`}
+      className="group grid grid-cols-[88px_1fr] gap-4 border-t border-white/10 py-4 transition first:border-t-0 first:pt-0 hover:text-slate-200"
+    >
+      <div className="relative h-20 overflow-hidden border border-white/10 bg-[#0b111d]">
+        <Image
+          src={article.image.src}
+          alt={article.image.alt}
+          fill
+          sizes="88px"
+          className="cover-image object-cover"
+        />
+      </div>
+      <div>
+        <ArticleMeta category={article.category} date={article.date} />
+        <h3 className="mt-2 text-lg font-black leading-tight text-slate-50 group-hover:text-slate-200">
+          {article.title}
+        </h3>
+      </div>
+    </Link>
+  );
+}
+
+function FeatureTile({ article }: { article: (typeof articles)[number] }) {
+  return (
+    <Link
+      href={`/articles/${article.slug}`}
+      className="group border border-white/10 bg-white/[0.035] transition hover:border-slate-300/30 hover:bg-white/[0.05]"
+    >
+      <div className="relative h-44 overflow-hidden border-b border-white/10 bg-[#0b111d]">
+        <Image
+          src={article.image.src}
+          alt={article.image.alt}
+          fill
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          className="cover-image object-cover transition duration-500 group-hover:scale-[1.02]"
+        />
+      </div>
+      <div className="p-5">
+        <ArticleMeta category={article.category} date={article.date} readTime={article.readTime} />
+        <h3 className="mt-3 text-2xl font-black leading-tight text-slate-50 group-hover:text-slate-200">
+          {article.title}
+        </h3>
+        <p className="mt-3 leading-7 text-slate-400">{article.excerpt}</p>
+      </div>
+    </Link>
+  );
+}
+
 export default function Home() {
   const [lead, ...sideStories] = featuredArticles;
-  const latestArticles = articles.slice(3);
+  const briefArticles = articles.slice(3, 6);
+  const infrastructureArticles = [articles[6], articles[7], articles[10]];
+  const productArticles = [articles[8], articles[9], articles[11]];
 
   return (
     <main className="space-field min-h-screen text-slate-200">
@@ -80,7 +174,7 @@ export default function Home() {
       <div className="star-noise min-h-screen">
         <SiteHeader />
 
-        <section>
+        <section id="ai">
           <div className="mx-auto max-w-7xl px-5 py-3 sm:px-8 lg:py-5">
             <div className="grid gap-3 lg:grid-cols-[1.18fr_0.82fr]">
               <Link
@@ -117,6 +211,13 @@ export default function Home() {
                 {sideStories.map((article) => (
                   <Link
                     key={article.slug}
+                    id={
+                      article.category === "Chips"
+                        ? "chips"
+                        : article.tag === "Startups"
+                          ? "startups"
+                          : undefined
+                    }
                     href={`/articles/${article.slug}`}
                     className="group grid grid-cols-[76px_1fr] gap-3 border border-white/10 bg-white/[0.035] p-2.5 backdrop-blur transition hover:border-slate-300/30 hover:bg-white/[0.05] sm:grid-cols-[108px_1fr] lg:grid-cols-[96px_1fr] xl:grid-cols-[116px_1fr]"
                   >
@@ -152,48 +253,34 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[1fr_320px]">
+        <section
+          id="security"
+          className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-[1fr_320px]"
+        >
           <div>
-            <div className="mb-6 flex items-end justify-between gap-4">
-              <div>
-                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
-                  Latest
-                </p>
-                <h2 className="mt-2 text-4xl font-black leading-none text-slate-50 sm:text-5xl">
-                  More Stories
-                </h2>
-              </div>
-            </div>
+            <SectionHeading
+              eyebrow="The Brief"
+              title="Signal Desk"
+              copy="Fast reads on the stories shaping how teams buy, secure, and design technology."
+            />
             <div className="grid gap-5">
-              {latestArticles.map((article) => (
-                <Link
-                  key={article.slug}
-                  id={article.category.toLowerCase().replaceAll(" ", "-")}
-                  href={`/articles/${article.slug}`}
-                  className="group grid gap-5 border border-white/10 bg-white/[0.035] p-5 backdrop-blur transition hover:border-slate-300/30 hover:bg-white/[0.05] sm:grid-cols-[150px_1fr]"
-                >
-                  <ArticleVisual
-                    accent={article.accent}
-                    src={article.image.src}
-                    alt={article.image.alt}
-                  />
-                  <div>
-                    <ArticleMeta
-                      category={article.category}
-                      date={article.date}
-                      readTime={article.readTime}
-                    />
-                    <h3 className="mt-3 text-2xl font-black leading-tight text-slate-50 group-hover:text-slate-200">
-                      {article.title}
-                    </h3>
-                    <p className="mt-3 leading-7 text-slate-400">{article.excerpt}</p>
-                  </div>
-                </Link>
+              {briefArticles.map((article) => (
+                <StoryRow key={article.slug} article={article} />
               ))}
             </div>
           </div>
 
           <aside className="space-y-5">
+            <div className="border border-white/10 bg-[#0b111d] p-5">
+              <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+                Reading Queue
+              </p>
+              <div className="mt-5">
+                {sideStories.map((article) => (
+                  <CompactStory key={article.slug} article={article} />
+                ))}
+              </div>
+            </div>
             <div className="border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
               <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
                 Editor&apos;s Board
@@ -241,6 +328,32 @@ export default function Home() {
               </form>
             </div>
           </aside>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 pb-12 sm:px-8">
+          <SectionHeading
+            eyebrow="Infrastructure"
+            title="Compute, Code, Grid"
+            copy="The operating layer beneath the next cycle: power, software, and the systems that keep scaled products online."
+          />
+          <div className="grid gap-5 lg:grid-cols-3">
+            {infrastructureArticles.map((article) => (
+              <FeatureTile key={article.slug} article={article} />
+            ))}
+          </div>
+        </section>
+
+        <section id="product" className="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+          <SectionHeading
+            eyebrow="Systems"
+            title="Product & Automation"
+            copy="Where interfaces, agents, devices, and robots meet the everyday workflows they have to improve."
+          />
+          <div className="grid gap-5 lg:grid-cols-3">
+            {productArticles.map((article) => (
+              <FeatureTile key={article.slug} article={article} />
+            ))}
+          </div>
         </section>
 
         <footer className="border-t border-white/10 bg-black/30">
