@@ -10,6 +10,10 @@ export type Article = {
   readTime: string;
   accent: string;
   theme: string;
+  image: {
+    src: string;
+    alt: string;
+  };
   keywords: string[];
   standfirst: string;
   sections: {
@@ -33,8 +37,12 @@ export const articles: Article[] = [
     date: "May 17, 2026",
     publishedAt: "2026-05-17",
     readTime: "7 min",
-    accent: "bg-[#ff4f87]",
-    theme: "from-[#ff4f87] via-[#ffc83d] to-[#2bd9a8]",
+    accent: "bg-[#8b5cf6]",
+    theme: "from-[#10162c] via-[#38206b] to-[#05d9e8]",
+    image: {
+      src: "/articles/enterprise-ai-orbit.svg",
+      alt: "Abstract orbital data rings around a bright enterprise AI core",
+    },
     keywords: ["enterprise AI", "AI services", "automation strategy", "AI startups"],
     standfirst:
       "The early wave rewarded demos. The next wave rewards delivery: data access, governance, workflow depth, security posture, and a service layer that makes AI feel accountable.",
@@ -75,8 +83,12 @@ export const articles: Article[] = [
     date: "May 17, 2026",
     publishedAt: "2026-05-17",
     readTime: "6 min",
-    accent: "bg-[#22b8ff]",
-    theme: "from-[#22b8ff] via-[#7c5cff] to-[#111827]",
+    accent: "bg-[#05d9e8]",
+    theme: "from-[#06111f] via-[#123c69] to-[#05d9e8]",
+    image: {
+      src: "/articles/ai-chip-map.svg",
+      alt: "Glowing processor grid floating over a deep space field",
+    },
     keywords: ["AI chips", "semiconductors", "inference", "data center hardware"],
     standfirst:
       "The chip race is widening from training clusters to inference economics, where small improvements in power, memory, and utilization can reshape cloud margins.",
@@ -117,8 +129,12 @@ export const articles: Article[] = [
     date: "May 16, 2026",
     publishedAt: "2026-05-16",
     readTime: "6 min",
-    accent: "bg-[#ffc83d]",
-    theme: "from-[#ffc83d] via-[#ff7a30] to-[#ff4f87]",
+    accent: "bg-[#f8c14a]",
+    theme: "from-[#111827] via-[#3a2a10] to-[#f8c14a]",
+    image: {
+      src: "/articles/defense-autonomy-grid.svg",
+      alt: "Satellite-like autonomy paths crossing a golden tactical grid",
+    },
     keywords: ["defense tech", "autonomous systems", "dual use startups", "procurement"],
     standfirst:
       "Defense technology is becoming a platform story because software, sensors, simulation, and autonomy can compound across multiple programs.",
@@ -159,8 +175,12 @@ export const articles: Article[] = [
     date: "May 15, 2026",
     publishedAt: "2026-05-15",
     readTime: "5 min",
-    accent: "bg-[#2bd9a8]",
-    theme: "from-[#2bd9a8] via-[#22b8ff] to-[#7c5cff]",
+    accent: "bg-[#38e8a4]",
+    theme: "from-[#061a16] via-[#123e38] to-[#38e8a4]",
+    image: {
+      src: "/articles/security-shield-nebula.svg",
+      alt: "Luminous security shield over a green nebula network",
+    },
     keywords: ["AI security", "shadow AI", "cybersecurity", "agent governance"],
     standfirst:
       "The new security challenge is not merely blocking tools. It is understanding which models, agents, prompts, files, and permissions are touching sensitive work.",
@@ -201,8 +221,12 @@ export const articles: Article[] = [
     date: "May 14, 2026",
     publishedAt: "2026-05-14",
     readTime: "8 min",
-    accent: "bg-[#7c5cff]",
-    theme: "from-[#7c5cff] via-[#ff4f87] to-[#ffc83d]",
+    accent: "bg-[#d946ef]",
+    theme: "from-[#14091f] via-[#40135a] to-[#d946ef]",
+    image: {
+      src: "/articles/search-signal-constellation.svg",
+      alt: "Constellation of search signals connected across a violet star field",
+    },
     keywords: ["search visibility", "AI search", "content strategy", "structured data"],
     standfirst:
       "Winning discovery in 2026 is less about gaming systems and more about making pages unmistakably useful, attributable, current, and easy to understand.",
@@ -243,8 +267,12 @@ export const articles: Article[] = [
     date: "May 13, 2026",
     publishedAt: "2026-05-13",
     readTime: "6 min",
-    accent: "bg-[#ff7a30]",
-    theme: "from-[#ff7a30] via-[#22b8ff] to-[#2bd9a8]",
+    accent: "bg-[#fb7185]",
+    theme: "from-[#1a0c15] via-[#512036] to-[#fb7185]",
+    image: {
+      src: "/articles/product-interface-orbit.svg",
+      alt: "Clean product interface panels orbiting a coral AI system",
+    },
     keywords: ["AI product design", "AI UX", "agentic workflows", "software design"],
     standfirst:
       "Chat made AI approachable, but the strongest products are already moving past chat as the main interface.",

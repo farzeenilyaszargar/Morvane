@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff9ef;
-  --foreground: #151515;
+  --background: #050711;
+  --foreground: #f5f7fb;
 }
 
 @theme inline {
@@ -12,6 +12,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -19,29 +23,54 @@ body {
 }
 
 ::selection {
-  background: #ff4f87;
-  color: white;
+  background: #05d9e8;
+  color: #050711;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.pixel-grid {
-  background-color: #fff9ef;
-  background-image:
-    linear-gradient(rgba(21, 21, 21, 0.08) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(21, 21, 21, 0.08) 2px, transparent 2px);
-  background-size: 32px 32px;
-}
-
-.pixel-thumb {
+.space-field {
   background:
-    linear-gradient(90deg, #ff4f87 0 25%, transparent 25% 100%),
-    linear-gradient(180deg, #ffc83d 0 35%, transparent 35% 100%),
-    linear-gradient(90deg, transparent 0 50%, #22b8ff 50% 75%, #2bd9a8 75% 100%),
-    #fff9ef;
-  background-size: 28px 28px, 38px 38px, 44px 44px, auto;
+    radial-gradient(circle at 12% 18%, rgba(5, 217, 232, 0.18), transparent 28%),
+    radial-gradient(circle at 86% 8%, rgba(139, 92, 246, 0.22), transparent 26%),
+    radial-gradient(circle at 75% 82%, rgba(248, 193, 74, 0.11), transparent 26%),
+    linear-gradient(180deg, #050711 0%, #080d1d 46%, #050711 100%);
+}
+
+.star-noise {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.45) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(5, 217, 232, 0.3) 1px, transparent 1.5px);
+  background-position:
+    0 0,
+    21px 29px;
+  background-size:
+    56px 56px,
+    83px 83px;
+}
+
+.pixel-logo {
+  image-rendering: pixelated;
+}
+
+.article-prose {
+  color: #d8deea;
+}
+
+.article-prose section + section {
+  margin-top: 3rem;
+}
+
+.article-prose h2 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-weight: 900;
+  line-height: 0.98;
+  margin-bottom: 1.25rem;
+}
+
+.article-prose p {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  margin-top: 1rem;
 }
 
 .border-3 {

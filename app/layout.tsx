@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pixelpress.example"),
+  metadataBase: new URL("https://morvane.space"),
   title: {
-    default: "PixelPress | Retro Tech News, AI, Startups, Security and Chips",
-    template: "%s | PixelPress",
+    default: "Morvane | Space-Age Technology Magazine",
+    template: "%s | Morvane",
   },
   description:
-    "PixelPress is a colorful retro technology publication covering AI, startups, cybersecurity, chips, product strategy, and search discovery.",
+    "Morvane is a dark, space-inspired technology magazine covering AI, startups, cybersecurity, chips, product strategy, and search discovery.",
   keywords: [
     "technology blog",
     "AI news",
@@ -29,20 +29,27 @@ export const metadata: Metadata = {
     "AI search",
     "AI chips",
   ],
-  authors: [{ name: "PixelPress Editorial" }],
+  authors: [{ name: "Morvane Editorial" }],
   openGraph: {
-    title: "PixelPress | Retro Tech News and Analysis",
+    title: "Morvane | Space-Age Technology Magazine",
     description:
-      "Readable technology coverage with a pixelated retro aesthetic: AI, startups, cybersecurity, chips, and product strategy.",
+      "A clean, dark technology magazine for AI, startups, cybersecurity, chips, and product strategy.",
     type: "website",
-    url: "https://pixelpress.example",
-    siteName: "PixelPress",
+    url: "https://morvane.space",
+    siteName: "Morvane",
+    images: [
+      {
+        url: "/articles/enterprise-ai-orbit.svg",
+        alt: "Morvane technology magazine cover image",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PixelPress | Retro Tech News and Analysis",
+    title: "Morvane | Space-Age Technology Magazine",
     description:
-      "Colorful, readable tech coverage for AI, startups, cybersecurity, chips, and product strategy.",
+      "A clean, dark technology magazine for AI, startups, cybersecurity, chips, and product strategy.",
+    images: ["/articles/enterprise-ai-orbit.svg"],
   },
 };
 
