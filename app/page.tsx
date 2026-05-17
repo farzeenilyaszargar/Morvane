@@ -80,7 +80,7 @@ export default function Home() {
       <div className="star-noise min-h-screen">
         <SiteHeader />
 
-        <section className="border-b border-white/10">
+        <section>
           <div className="mx-auto max-w-7xl px-5 py-3 sm:px-8 lg:py-5">
             <div className="grid gap-3 lg:grid-cols-[1.18fr_0.82fr]">
               <Link
