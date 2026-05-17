@@ -5,30 +5,76 @@ import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/articles";
 
 function PixelLogo() {
+  const pixels = [
+    "core",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "core",
+    "core",
+    "core",
+    "",
+    "",
+    "",
+    "core",
+    "core",
+    "core",
+    "",
+    "core",
+    "",
+    "core",
+    "",
+    "core",
+    "core",
+    "",
+    "",
+    "core",
+    "",
+    "",
+    "core",
+    "core",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "core",
+    "core",
+    "",
+    "star",
+    "",
+    "star",
+    "",
+    "core",
+    "core",
+    "",
+    "",
+    "dim",
+    "",
+    "",
+    "core",
+  ];
+
   return (
     <span
-      className="pixel-logo grid size-8 shrink-0 grid-cols-4 overflow-hidden bg-slate-200"
+      className="pixel-logo grid size-9 shrink-0 grid-cols-7 border-2 border-slate-500/70 bg-[#0a101b] p-1 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] transition group-hover:border-slate-300"
       aria-hidden="true"
     >
-      {[
-        "bg-slate-100",
-        "bg-slate-500",
-        "bg-slate-200",
-        "bg-slate-700",
-        "bg-slate-600",
-        "bg-slate-100",
-        "bg-slate-700",
-        "bg-slate-300",
-        "bg-slate-200",
-        "bg-slate-700",
-        "bg-slate-100",
-        "bg-slate-500",
-        "bg-slate-700",
-        "bg-slate-300",
-        "bg-slate-600",
-        "bg-slate-100",
-      ].map((color, index) => (
-        <span key={`${color}-${index}`} className={color} />
+      {pixels.map((tone, index) => (
+        <span
+          key={`${tone}-${index}`}
+          className={
+            tone === "core"
+              ? "bg-slate-100"
+              : tone === "star"
+                ? "bg-cyan-200"
+                : tone === "dim"
+                  ? "bg-slate-500"
+                  : "bg-transparent"
+          }
+        />
       ))}
     </span>
   );
