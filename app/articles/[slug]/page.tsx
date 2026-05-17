@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { articles, getArticleBySlug, getRelatedArticles, navItems } from "@/lib/articles";
+import { SiteHeader } from "@/components/site-header";
+import { articles, getArticleBySlug, getRelatedArticles } from "@/lib/articles";
 
 const siteUrl = "https://morvane.space";
 
@@ -58,66 +59,6 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       description: article.dek,
     },
   };
-}
-
-function PixelLogo() {
-  return (
-    <span className="pixel-logo grid size-10 grid-cols-5 overflow-hidden border border-white/20 bg-[#0b0f18] ">
-      {[
-        "bg-slate-200",
-        "bg-slate-300",
-        "bg-transparent",
-        "bg-slate-500",
-        "bg-slate-400",
-        "bg-slate-300",
-        "bg-transparent",
-        "bg-white",
-        "bg-transparent",
-        "bg-slate-500",
-        "bg-transparent",
-        "bg-white",
-        "bg-slate-300",
-        "bg-white",
-        "bg-transparent",
-        "bg-slate-500",
-        "bg-transparent",
-        "bg-white",
-        "bg-transparent",
-        "bg-slate-400",
-        "bg-slate-500",
-        "bg-slate-400",
-        "bg-transparent",
-        "bg-slate-300",
-        "bg-slate-500",
-      ].map((color, index) => (
-        <span key={`${color}-${index}`} className={color} />
-      ))}
-    </span>
-  );
-}
-
-function SiteHeader() {
-  return (
-    <header className="border-b border-white/10 bg-[#070910]/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-5 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Morvane home">
-          <PixelLogo />
-          <span className="font-mono text-2xl font-black uppercase tracking-[0.16em]">Morvane</span>
-        </Link>
-        <div className="flex flex-wrap gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-slate-400">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              href={`/#${item.toLowerCase().replaceAll(" ", "-")}`}
-              className="border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-slate-300/40 hover:bg-white/[0.04] hover:text-white"
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
-      </nav>
-    </header>
-  );
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
