@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Browser agents</title>
+  <desc id="desc">Browser window panels arranged in a restrained space interface.</desc>
+  <rect width="1200" height="760" fill="#080d16"/>
+  <g fill="#111827" stroke="#cbd5e1" stroke-opacity=".42">
+    <rect x="180" y="160" width="840" height="440" rx="18"/>
+    <rect x="245" y="250" width="270" height="230"/>
+    <rect x="550" y="250" width="405" height="80"/>
+    <rect x="550" y="366" width="405" height="114"/>
+  </g>
+  <path d="M180 220h840" stroke="#cbd5e1" stroke-opacity=".42" stroke-width="3"/>
+  <g fill="#cbd5e1" opacity=".66">
+    <circle cx="230" cy="190" r="10"/>
+    <circle cx="266" cy="190" r="10"/>
+    <circle cx="302" cy="190" r="10"/>
+  </g>
+  <path d="M358 410l92-92m0 0v70m0-70h-70" stroke="#94a3b8" stroke-width="7" fill="none"/>
+</svg>

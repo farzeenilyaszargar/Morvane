@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Open-source stack</title>
+  <desc id="desc">Layered open-source software blocks arranged like a quiet orbital stack.</desc>
+  <rect width="1200" height="760" fill="#080d16"/>
+  <g transform="translate(250 145)" stroke="#cbd5e1" stroke-opacity=".45">
+    <rect x="0" y="300" width="700" height="86" fill="#111827"/>
+    <rect x="70" y="210" width="560" height="86" fill="#141b2a"/>
+    <rect x="140" y="120" width="420" height="86" fill="#172033"/>
+    <rect x="210" y="30" width="280" height="86" fill="#1d2638"/>
+  </g>
+  <g fill="#cbd5e1" opacity=".72">
+    <circle cx="384" cy="488" r="10"/>
+    <circle cx="600" cy="398" r="10"/>
+    <circle cx="522" cy="308" r="10"/>
+    <circle cx="670" cy="218" r="10"/>
+  </g>
+  <path d="M384 488l216-90-78-90 148-90" fill="none" stroke="#94a3b8" stroke-width="4" opacity=".7"/>
+</svg>

@@ -302,6 +302,282 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "data-centers-power-hungry-compute",
+    category: "Infrastructure",
+    title: "Data centers are becoming power markets with servers inside",
+    dek: "The compute boom is making energy strategy, grid access, and cooling design central to technology planning.",
+    excerpt:
+      "As AI workloads grow, the winning data-center operators are thinking like energy companies as much as cloud platforms.",
+    tag: "Compute",
+    date: "May 12, 2026",
+    publishedAt: "2026-05-12",
+    readTime: "6 min",
+    accent: "bg-slate-400",
+    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
+    image: {
+      src: "/articles/data-center-power.svg",
+      alt: "Quiet data-center blocks connected to a power grid in deep space",
+    },
+    keywords: ["data centers", "AI infrastructure", "power grid", "cloud computing"],
+    standfirst:
+      "Compute capacity is no longer just a question of racks and chips. It is increasingly a question of substations, water, cooling, land, and long-term power contracts.",
+    pullQuote:
+      "The next scarce cloud resource may be reliable electricity in the right place.",
+    sections: [
+      {
+        heading: "Power is part of the product",
+        body: [
+          "For years, cloud infrastructure was discussed mostly in terms of regions, chips, and storage. AI has made power availability just as strategic. A cluster that cannot be energized on schedule is not capacity at all.",
+          "That changes the operator playbook. Site selection, utility relationships, cooling methods, and energy procurement now shape how quickly new compute can come online.",
+        ],
+      },
+      {
+        heading: "Cooling becomes a design constraint",
+        body: [
+          "Dense accelerated compute changes the heat profile inside a data center. Air cooling remains familiar, but liquid cooling and hybrid approaches are moving from niche engineering topics into board-level capacity planning.",
+          "The best operators will make cooling invisible to customers while using it as an advantage in cost, reliability, and deployment speed.",
+        ],
+      },
+      {
+        heading: "Why buyers should care",
+        body: [
+          "Enterprise buyers may not negotiate directly with utilities, but they will feel the effects through availability, pricing, latency, and regional options.",
+          "The cloud conversation is becoming a supply-chain conversation, and power is now one of its most important inputs.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "open-source-ai-infrastructure-stack",
+    category: "Open Source",
+    title: "Open-source AI infrastructure is moving from hobby stack to enterprise default",
+    dek: "Companies want control over models, evaluation, routing, and deployment without waiting for one vendor to define the whole workflow.",
+    excerpt:
+      "The modern AI stack is becoming modular, with open tools filling the gaps between models, data, evaluation, and production systems.",
+    tag: "Software",
+    date: "May 11, 2026",
+    publishedAt: "2026-05-11",
+    readTime: "7 min",
+    accent: "bg-slate-400",
+    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
+    image: {
+      src: "/articles/open-source-stack.svg",
+      alt: "Layered open-source software blocks arranged like a quiet orbital stack",
+    },
+    keywords: ["open source AI", "AI infrastructure", "developer tools", "model operations"],
+    standfirst:
+      "The AI infrastructure market is maturing into layers: orchestration, observability, evaluation, retrieval, deployment, and governance.",
+    pullQuote:
+      "Open source wins when teams need leverage without surrendering control.",
+    sections: [
+      {
+        heading: "The stack is splitting into layers",
+        body: [
+          "A year ago, many AI applications were prototypes wrapped around a single model API. Production systems now need routing, caching, permissions, evaluation, logging, and retrieval that can survive real customer traffic.",
+          "That complexity gives open-source infrastructure a larger role. Teams can adopt pieces gradually and avoid rebuilding the same plumbing across every product team.",
+        ],
+      },
+      {
+        heading: "Control matters more in production",
+        body: [
+          "Enterprises want to compare models, move workloads, inspect outputs, and define policies in their own environment. Open tooling helps them keep options open while vendors compete at each layer.",
+          "The result is not a pure open-source world. It is a hybrid market where managed services and community tools often sit side by side.",
+        ],
+      },
+      {
+        heading: "The adoption signal",
+        body: [
+          "The strongest projects are not just popular repositories. They are becoming operational defaults inside companies that need repeatable AI delivery.",
+          "Watch for tools that make production behavior easier to measure, not merely easier to demo.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "warehouse-robots-software-layer",
+    category: "Robotics",
+    title: "Warehouse robots are becoming a software integration problem",
+    dek: "The hardware is improving, but the bigger challenge is coordinating robots, workers, inventory, and exception handling.",
+    excerpt:
+      "Robotics companies are learning that deployment quality depends as much on workflow software as on the machine itself.",
+    tag: "Automation",
+    date: "May 10, 2026",
+    publishedAt: "2026-05-10",
+    readTime: "6 min",
+    accent: "bg-slate-400",
+    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
+    image: {
+      src: "/articles/warehouse-robots.svg",
+      alt: "Minimal warehouse robotics lanes drawn as muted orbital paths",
+    },
+    keywords: ["warehouse robotics", "automation", "supply chain", "robot software"],
+    standfirst:
+      "The robot is only one part of the system. The real deployment lives in task assignment, inventory accuracy, safety routines, and the messy edge cases of daily operations.",
+    pullQuote:
+      "A robot that cannot fit the workflow is still unfinished product.",
+    sections: [
+      {
+        heading: "Hardware gets attention, integration gets results",
+        body: [
+          "Warehouse robotics often sells through impressive demos: fast picking, smooth motion, precise navigation. But the deployment succeeds only when the robot fits the facility's software and operating habits.",
+          "That means integrations with warehouse management systems, worker tools, inventory data, and maintenance processes matter as much as mobility or gripper design.",
+        ],
+      },
+      {
+        heading: "Exceptions define the system",
+        body: [
+          "Real warehouses are full of awkward cases: damaged packaging, missing bins, blocked aisles, late orders, and sudden labor changes. Robots need clean escalation paths when confidence drops.",
+          "The best systems treat humans as part of the loop without turning every exception into a productivity sink.",
+        ],
+      },
+      {
+        heading: "A platform opportunity",
+        body: [
+          "As fleets grow, operators need scheduling, monitoring, analytics, and simulation across mixed hardware. That opens room for software layers that coordinate machines from multiple vendors.",
+          "The robotics market may be won by companies that make automation manageable, not just impressive.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "browser-agents-enterprise-workflows",
+    category: "Product",
+    title: "Browser agents are the new test of enterprise trust",
+    dek: "Agents that operate software through the browser are powerful because they meet work where it already happens.",
+    excerpt:
+      "The browser is becoming a proving ground for agentic workflows, but permissions, review, and audit trails will decide adoption.",
+    tag: "Agents",
+    date: "May 9, 2026",
+    publishedAt: "2026-05-09",
+    readTime: "6 min",
+    accent: "bg-slate-400",
+    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
+    image: {
+      src: "/articles/browser-agents.svg",
+      alt: "Browser window panels arranged in a restrained space interface",
+    },
+    keywords: ["browser agents", "enterprise automation", "AI agents", "workflow software"],
+    standfirst:
+      "The browser is the common layer across countless business tools. That makes it a natural environment for agents, and a difficult one to govern.",
+    pullQuote:
+      "The agent that can click anything needs a very clear reason to click anything.",
+    sections: [
+      {
+        heading: "Why the browser matters",
+        body: [
+          "Enterprise work is fragmented across SaaS tools, internal dashboards, ticketing systems, spreadsheets, and email. Browser agents are attractive because they can operate across those surfaces without every app exposing a perfect API.",
+          "That flexibility is also the risk. A broad action surface requires strong permissions, clear review states, and reliable logs.",
+        ],
+      },
+      {
+        heading: "Trust has to be designed in",
+        body: [
+          "Users need to know what the agent is about to do, what it already did, and how to stop or reverse it. Hidden automation will not survive inside serious companies.",
+          "The most credible products will feel less like a black-box assistant and more like a careful operator with receipts.",
+        ],
+      },
+      {
+        heading: "The near-term shape",
+        body: [
+          "Expect browser agents to start with constrained tasks: collecting data, updating records, drafting responses, testing workflows, and checking repetitive dashboards.",
+          "The winners will expand gradually by proving reliability in narrow, valuable routines.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "grid-software-climate-tech",
+    category: "Energy",
+    title: "Grid software is becoming climate tech's quiet center",
+    dek: "The energy transition needs batteries and renewables, but it also needs better software for forecasting, dispatch, and grid coordination.",
+    excerpt:
+      "Climate tech is increasingly about the operating layer that helps energy assets behave like a reliable system.",
+    tag: "Energy",
+    date: "May 8, 2026",
+    publishedAt: "2026-05-08",
+    readTime: "7 min",
+    accent: "bg-slate-400",
+    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
+    image: {
+      src: "/articles/grid-software.svg",
+      alt: "Muted energy grid nodes arranged across a dark technical map",
+    },
+    keywords: ["grid software", "climate tech", "energy storage", "renewable energy"],
+    standfirst:
+      "A cleaner grid is also a more complex grid. Software is becoming the coordination layer between generation, storage, demand, pricing, and reliability.",
+    pullQuote:
+      "The grid does not only need more assets. It needs better orchestration.",
+    sections: [
+      {
+        heading: "Complexity is the market",
+        body: [
+          "Renewables, storage, electric vehicles, and flexible demand are changing how electricity moves. The grid must balance more variable inputs while remaining reliable every second.",
+          "That creates a software opportunity around forecasting, dispatch, asset management, market participation, and grid visibility.",
+        ],
+      },
+      {
+        heading: "The buyer is not always obvious",
+        body: [
+          "Utilities, developers, large energy users, aggregators, and grid operators all need different slices of the software stack. The challenge is building products that fit slow procurement while proving operational value quickly.",
+          "Companies that understand both software delivery and grid regulation will have an advantage.",
+        ],
+      },
+      {
+        heading: "Why this belongs in tech",
+        body: [
+          "Energy systems are becoming data systems. The tools that manage them will look increasingly like infrastructure software, with uptime, integrations, observability, and controls at the center.",
+          "That makes grid software one of the most important quiet categories in climate tech.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "personal-ai-hardware-second-screen",
+    category: "Consumer Tech",
+    title: "Personal AI hardware needs to earn its place beyond the phone",
+    dek: "Wearables and dedicated AI devices promise ambient help, but users already carry a powerful computer everywhere.",
+    excerpt:
+      "The next consumer hardware wave has to justify itself through context, privacy, battery life, and moments where the phone is the wrong interface.",
+    tag: "Devices",
+    date: "May 7, 2026",
+    publishedAt: "2026-05-07",
+    readTime: "5 min",
+    accent: "bg-slate-400",
+    theme: "from-[#0b101a] via-[#101726] to-[#172033]",
+    image: {
+      src: "/articles/personal-ai-hardware.svg",
+      alt: "Minimal personal device silhouettes floating on a dark reading-focused backdrop",
+    },
+    keywords: ["AI hardware", "consumer devices", "wearables", "personal AI"],
+    standfirst:
+      "A dedicated AI device cannot survive on novelty. It needs to solve a repeated moment better than the phone, watch, laptop, or earbuds already do.",
+    pullQuote:
+      "The question is not whether AI can fit in a gadget. It is whether the gadget deserves to exist.",
+    sections: [
+      {
+        heading: "The phone is the default rival",
+        body: [
+          "Every new consumer AI device competes with a smartphone that already has a screen, camera, microphone, apps, payments, identity, and constant connectivity.",
+          "That means new hardware must be meaningfully better in a narrow context: hands-free capture, privacy, battery endurance, low-friction translation, or presence without screen time.",
+        ],
+      },
+      {
+        heading: "Ambient does not mean invisible",
+        body: [
+          "Consumers need clear signals when a device is listening, recording, summarizing, or sending data. Trust is a product feature, especially when hardware sits close to the body.",
+          "The strongest designs will make privacy legible without turning every interaction into a settings panel.",
+        ],
+      },
+      {
+        heading: "The path to adoption",
+        body: [
+          "The likely winners will start as accessories, not replacements. They will extend the phone or laptop in moments where a screen is awkward.",
+          "If they earn daily use there, they can become more ambitious over time.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const featuredArticles = articles.slice(0, 3);

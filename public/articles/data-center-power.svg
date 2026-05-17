@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Data center power</title>
+  <desc id="desc">Quiet data-center blocks connected to a power grid in deep space.</desc>
+  <rect width="1200" height="760" fill="#080d16"/>
+  <path d="M120 560h960M120 460h960M120 360h960M120 260h960" stroke="#d8e2f0" opacity=".12"/>
+  <path d="M220 175v430M420 175v430M620 175v430M820 175v430M1020 175v430" stroke="#d8e2f0" opacity=".12"/>
+  <g fill="#111827" stroke="#9aa7b8" stroke-opacity=".45">
+    <rect x="210" y="265" width="150" height="230"/>
+    <rect x="400" y="225" width="150" height="270"/>
+    <rect x="590" y="285" width="150" height="210"/>
+    <rect x="780" y="245" width="150" height="250"/>
+  </g>
+  <g fill="#cbd5e1" opacity=".68">
+    <rect x="238" y="304" width="92" height="14"/>
+    <rect x="428" y="264" width="92" height="14"/>
+    <rect x="618" y="324" width="92" height="14"/>
+    <rect x="808" y="284" width="92" height="14"/>
+  </g>
+  <path d="M170 590c180-150 278-110 432-80 182 36 282-20 420-160" fill="none" stroke="#94a3b8" stroke-width="6" opacity=".72"/>
+</svg>
