@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { articles, featuredArticles } from "@/lib/articles";
 
@@ -370,11 +371,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="border-t border-white/10 bg-black/30">
-          <div className="mx-auto flex max-w-7xl justify-center px-5 py-8 text-center text-sm text-slate-500 sm:px-8">
-            <p>Morvane covers technology from the edge of the map.</p>
-          </div>
-        </footer>
+        <SiteFooter />
       </div>
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { articles, getArticleBySlug, getRelatedArticles } from "@/lib/articles";
 
@@ -215,6 +216,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </aside>
           </div>
         </article>
+
+        <SiteFooter />
       </div>
     </main>
   );
