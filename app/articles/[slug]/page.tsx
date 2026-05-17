@@ -171,6 +171,26 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   {article.pullQuote}
                 </p>
               </div>
+              {article.sourceLinks ? (
+                <div className="border border-white/10 bg-[#0b111d] p-5">
+                  <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+                    Source Trail
+                  </p>
+                  <div className="mt-4 space-y-3">
+                    {article.sourceLinks.map((source) => (
+                      <a
+                        key={source.url}
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="block border-t border-white/10 pt-3 text-sm font-bold leading-6 text-slate-300 transition first:border-t-0 first:pt-0 hover:text-white"
+                      >
+                        {source.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
               <div className="border border-white/10 bg-[#0b111d] p-5">
                 <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
                   Related

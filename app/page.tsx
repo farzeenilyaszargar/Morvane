@@ -99,7 +99,7 @@ function StoryRow({ article }: { article: (typeof articles)[number] }) {
       <ArticleVisual accent={article.accent} src={article.image.src} alt={article.image.alt} />
       <div>
         <ArticleMeta category={article.category} date={article.date} readTime={article.readTime} />
-        <h3 className="mt-3 text-2xl font-black leading-tight text-slate-50 group-hover:text-slate-200">
+        <h3 className="mt-3 text-xl font-black leading-tight text-slate-50 group-hover:text-slate-200 xl:text-2xl">
           {article.title}
         </h3>
         <p className="mt-3 leading-7 text-slate-400">{article.excerpt}</p>
@@ -164,6 +164,7 @@ export default function Home() {
   const briefArticles = articles.slice(3, 6);
   const infrastructureArticles = [articles[6], articles[7], articles[10]];
   const productArticles = [articles[8], articles[9], articles[11]];
+  const startupFundingArticles = articles.slice(12);
 
   return (
     <main className="space-field min-h-screen text-slate-200">
@@ -250,6 +251,19 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="funding" className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+          <SectionHeading
+            eyebrow="Startup Ledger"
+            title="Funding & Founder Lore"
+            copy="Fresh venture rounds, stranger founder lessons, and the capital stories behind the companies trying to become infrastructure."
+          />
+          <div className="grid gap-5 lg:grid-cols-4">
+            {startupFundingArticles.map((article) => (
+              <FeatureTile key={article.slug} article={article} />
+            ))}
           </div>
         </section>
 

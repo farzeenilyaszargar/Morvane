@@ -21,10 +21,14 @@ export type Article = {
     heading: string;
     body: string[];
   }[];
+  sourceLinks?: {
+    label: string;
+    url: string;
+  }[];
   pullQuote: string;
 };
 
-export const navItems = ["AI", "Startups", "Security", "Chips", "Product"];
+export const navItems = ["AI", "Startups", "Funding", "Security", "Chips", "Product"];
 
 export const articles: Article[] = [
   {
@@ -591,6 +595,284 @@ export const articles: Article[] = [
         body: [
           "The likely winners will start as accessories, not replacements. They will extend the phone or laptop in moments where a screen is awkward.",
           "If they earn daily use there, they can become more ambitious over time.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "venture-megarounds-reshape-startup-market",
+    category: "Funding",
+    title: "The new venture headline is the mega-round, not the median startup",
+    dek: "Recent funding data makes the startup market look explosive at the top and stubborn underneath, with capital clustering around the few companies investors believe can become infrastructure.",
+    excerpt:
+      "Q1 records and May mega-rounds are masking a more selective market where capital is available, but only for companies with unusually clear scale stories.",
+    tag: "Funding",
+    date: "May 17, 2026",
+    publishedAt: "2026-05-17",
+    readTime: "9 min",
+    accent: "bg-slate-400",
+    image: {
+      src: "/articles/source-photos/startup-capital-megadeals.jpg",
+      alt: "A Silicon Valley restaurant known as a meeting place for venture dealmakers",
+      credit: "Intel Free Press / Wikimedia Commons",
+      creditUrl:
+        "https://commons.wikimedia.org/wiki/File:Bar_at_Buck%27s,_Hangout_of_Silicon_Valley_Venture_Capital_Dealmakers.jpg",
+    },
+    keywords: ["startup funding", "venture capital", "mega-rounds", "private markets"],
+    standfirst:
+      "The venture market is no longer best understood as hot or cold. It is barbell-shaped: huge checks for a small set of perceived category winners, and a slower grind for everyone else.",
+    pullQuote:
+      "The capital is back, but it is not evenly back. It is concentrating around companies that can argue they are becoming markets, not merely serving them.",
+    sourceLinks: [
+      {
+        label: "PitchBook-NVCA Venture Monitor, Q1 2026",
+        url: "https://nvca.org/wp-content/uploads/2026/04/Q1-2026-PitchBook-NVCA-Venture-Monitor.pdf",
+      },
+      {
+        label: "Crunchbase Megadeals Board",
+        url: "https://news.crunchbase.com/biggest-us-vc-startup-funding-deals-2023/",
+      },
+    ],
+    sections: [
+      {
+        heading: "The headline number is telling the truth badly",
+        body: [
+          "PitchBook and NVCA describe a record-setting first quarter for venture deal value and exits, but the same report shows how dependent those records are on a small number of enormous transactions. Remove the largest deals and the market looks much closer to the slower, tighter environment founders have been living through since the reset.",
+          "That split matters because founders often read the top-line numbers as a signal that money is broadly loose again. It is not. Late-stage investors are writing large checks when they can underwrite strategic scarcity: frontier models, defense platforms, compute, energy, security, and software that sits directly in a budget line.",
+          "For everyone else, the fundraising work is still more deliberate. A credible narrative now needs unit economics, customer urgency, and a reason the company should be financed ahead of dozens of similar startups making the same AI-adjacent promise.",
+        ],
+      },
+      {
+        heading: "Megadeals are becoming private-market IPOs",
+        body: [
+          "A $100 million-plus round used to suggest an aggressive growth company. In 2026, the largest rounds can look more like private-market listings: enormous capitalizations, intense secondary demand, and a shareholder base preparing for a long pre-public life.",
+          "Crunchbase's May megadeals board shows the pattern plainly. Capital is chasing companies that feel hard to replicate: defense systems, data power, robotics, space infrastructure, biotech platforms, and other categories where the product has a physical or regulatory moat.",
+          "The result is a startup market where private companies can become systemically important before public investors ever see a prospectus. That can be powerful for builders, but it also raises the penalty for weak governance, opaque marks, and growth stories that depend on permanent private-market patience.",
+        ],
+      },
+      {
+        heading: "The lore has shifted from blitzscaling to leverage",
+        body: [
+          "The heroic founder story used to be about hiring faster than the market could understand. The new story is about doing more with less: tiny teams, sharper distribution, proprietary data, and products that feel unusually close to revenue.",
+          "That is especially true in AI, where a small team can appear much larger than it is. The advantage is real, but investors are learning to separate model wrappers from companies with workflow ownership, data advantage, procurement access, or a reason customers cannot easily switch.",
+          "The best startup lore in this cycle is less theatrical. It is the founder who knows exactly which budget owner feels pain, what proof will unlock the next contract, and which part of the company should stay small even after funding arrives.",
+        ],
+      },
+      {
+        heading: "What founders should take from the market",
+        body: [
+          "A large round in the news is not a green light to raise casually. It is a reminder that investors are willing to pay up when a company can compress risk into a clear category thesis.",
+          "Founders should be precise about which market they are actually entering. A startup building automation for hospitals, utilities, or government buyers should not pitch like a consumer app with an enterprise price tag. The diligence bar is different, the sales motion is different, and the credibility signals are different.",
+          "The more useful takeaway is not that fundraising is easy again. It is that capital is rewarding companies that can make themselves legible: what they replace, why now, why this team, why the customer moves this year, and why the business gets stronger after each deployment.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "physical-world-startups-funding-premium",
+    category: "Startups",
+    title: "Physical-world startups are getting the new scarcity premium",
+    dek: "Anduril's reported $5 billion raise is the loudest example of a broader investor move toward companies that combine software with hardware, procurement, and hard-to-copy deployment loops.",
+    excerpt:
+      "Defense, robotics, energy, and mobility companies are raising like software platforms because the market is paying for scarcity, not just code velocity.",
+    tag: "Funding",
+    date: "May 17, 2026",
+    publishedAt: "2026-05-17",
+    readTime: "8 min",
+    accent: "bg-slate-400",
+    image: {
+      src: "/articles/source-photos/physical-world-startups.jpg",
+      alt: "Soldiers training with an Anduril Ghost X drone system",
+      credit: "U.S. Army / Wikimedia Commons",
+      creditUrl:
+        "https://commons.wikimedia.org/wiki/File:10th_Mountain_Division_train_on_the_Anduril_Ghost_X_Small_Unmanned_Aircraft_System_during_Combined_Resolve_(8831271).jpg",
+    },
+    keywords: ["startup funding", "defense tech", "robotics", "hardware startups"],
+    standfirst:
+      "The market is learning to value startups that can move atoms, not only pixels. The catch is that physical-world companies must prove both software-like learning curves and operational discipline.",
+    pullQuote:
+      "The new premium belongs to startups that can make hard deployment look repeatable.",
+    sourceLinks: [
+      {
+        label: "TechCrunch on Anduril's $5B raise",
+        url: "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/",
+      },
+      {
+        label: "Crunchbase Megadeals Board",
+        url: "https://news.crunchbase.com/biggest-us-vc-startup-funding-deals-2023/",
+      },
+    ],
+    sections: [
+      {
+        heading: "Software alone is no longer the only fast story",
+        body: [
+          "The cleanest venture story of the last decade was pure software: write code, distribute globally, and improve margins as customers scale. That story still matters, but the newest funding cycle is giving more attention to companies that blend software with hardware, operations, and physical infrastructure.",
+          "Anduril's latest financing, reported by TechCrunch as a $5 billion raise that doubled its valuation to $61 billion, sits at the extreme end of that shift. It suggests investors are willing to treat defense technology as a platform category when the company can show procurement access, product breadth, and a software layer that improves across deployments.",
+          "The same logic appears in robotics, energy, data centers, and logistics. These businesses are harder to start and slower to prove, but once they work, they can become difficult to clone from a browser tab.",
+        ],
+      },
+      {
+        heading: "The moat is not the machine",
+        body: [
+          "Hardware gets the photograph, but the real valuation argument is usually the system around it. Investors want to see simulation, fleet learning, software updates, supply-chain control, service networks, and customer relationships that turn each deployment into better future deployments.",
+          "That is why physical-world startups increasingly pitch themselves as platforms. A drone, robot, charger, sensor, or energy asset is the entry point. The compounding layer is data, command software, maintenance workflows, procurement history, and the ability to adapt the same core system to adjacent missions.",
+          "The strongest companies make the operational burden feel like an advantage. The weakest ones discover that hardware complexity can consume every dollar of a large round before the platform has time to appear.",
+        ],
+      },
+      {
+        heading: "Why investors are suddenly more patient",
+        body: [
+          "Geopolitics, energy demand, industrial policy, and AI infrastructure needs have made the physical world feel newly strategic. A company that can supply credible defense systems, grid capacity, cooling technology, logistics automation, or data-center power is no longer just a hard-tech curiosity.",
+          "That creates a different kind of urgency. Customers in these markets may move slowly, but once they decide a capability matters, they can buy at scales that consumer software companies rarely see early in life.",
+          "The funding premium is partly a scarcity premium. There are not many teams that can recruit elite software talent, survive hardware iteration, understand regulated buyers, and keep operations from overwhelming the product roadmap.",
+        ],
+      },
+      {
+        heading: "The risk behind the romance",
+        body: [
+          "Physical-world startup lore can become too heroic. A giant round does not remove manufacturing delays, certification, safety reviews, customer concentration, working capital needs, or the risk of building ahead of confirmed demand.",
+          "For founders, the lesson is to be honest about what kind of company they are building. If the sales cycle depends on government budgets or industrial deployment, the startup needs financing, governance, and milestones that match that reality.",
+          "For readers, the interesting question is not whether hardware is back. It is whether the best hardware companies can keep enough software leverage to deserve venture-scale outcomes.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "rapido-wirestock-founder-lore",
+    category: "Startups",
+    title: "The best startup lore right now is operational, not mythical",
+    dek: "Rapido and Wirestock tell very different stories, but both show how the strongest funding narratives are moving toward execution depth, not founder theater.",
+    excerpt:
+      "Recent rounds for Rapido and Wirestock point to a founder market that rewards messy operational knowledge, supply networks, and hard-earned distribution.",
+    tag: "Founders",
+    date: "May 16, 2026",
+    publishedAt: "2026-05-16",
+    readTime: "9 min",
+    accent: "bg-slate-400",
+    image: {
+      src: "/articles/source-photos/startup-office-lore.png",
+      alt: "A startup office workspace with desks and computers",
+      credit: "Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Inside_the_office_workspace.png",
+    },
+    keywords: ["startup founders", "startup funding", "Rapido", "Wirestock"],
+    standfirst:
+      "The founder stories that travel in 2026 are not only about charisma. They are about knowing the underside of a market well enough to make it legible to capital.",
+    pullQuote:
+      "Operational knowledge has become a kind of founder mythology: less cinematic, more useful.",
+    sourceLinks: [
+      {
+        label: "TechCrunch on Rapido's $240M raise",
+        url: "https://techcrunch.com/2026/05/15/indian-uber-rival-rapido-raises-240m-at-3b-valuation/",
+      },
+      {
+        label: "TechCrunch on Wirestock's $23M Series A",
+        url: "https://techcrunch.com/2026/05/14/wirestock-raises-23m-to-supply-multi-modal-data-to-ai-labs/",
+      },
+    ],
+    sections: [
+      {
+        heading: "The romance has moved closer to the ground",
+        body: [
+          "Startup mythology used to favor the clean break: the founder sees the future, builds the product, and bends the market around it. The more interesting 2026 version is less clean. It is about founders who learn from fragmented supply, low-margin behavior, creator incentives, driver networks, procurement bottlenecks, or messy data operations.",
+          "Rapido's new $240 million raise at a reported $3 billion valuation is not a story about inventing ride-hailing. It is a story about understanding Indian mobility at street level: motorbikes, auto-rickshaws, smaller cities, driver supply, pricing pressure, and the way local transport demand behaves outside the easiest urban routes.",
+          "Wirestock's $23 million Series A has a different texture. The company moved from helping photographers distribute stock work to supplying multimodal data to AI labs. That pivot only works if the company can manage creator trust, task quality, annotation detail, and enterprise demand at the same time.",
+        ],
+      },
+      {
+        heading: "Fundraising now rewards earned mess",
+        body: [
+          "Investors like clean markets, but they increasingly pay for teams that can operate in messy ones. The mess is where differentiation hides. Anyone can describe AI data demand or urban mobility growth. Fewer teams can recruit contributors, keep supply quality high, manage local incentives, and build software that handles exceptions at scale.",
+          "That is the founder lore worth watching: not the viral memo, but the accumulated judgment about where a market breaks. Which customers churn for non-obvious reasons? Which suppliers need faster payments? Which users behave differently when the product enters a second-tier city? Which workflows need human review before automation can work?",
+          "When a startup can answer those questions precisely, the funding story becomes more credible. The pitch stops sounding like a category and starts sounding like a company.",
+        ],
+      },
+      {
+        heading: "Distribution is becoming biography",
+        body: [
+          "A founder's biography now matters most when it explains distribution. Prior experience, geography, community ties, and market scars are useful if they show why this team can reach supply or demand that others cannot.",
+          "Rapido's advantage is not only capital. It is the operating history of building a mobility network in cities where price, regulation, driver incentives, and congestion make imported playbooks fragile.",
+          "Wirestock's advantage is not only that AI labs need data. It is that the company already had a relationship with creative contributors and could reshape that network around custom data tasks, quality review, and enterprise sales.",
+        ],
+      },
+      {
+        heading: "A better founder story for readers",
+        body: [
+          "The healthier way to read startup lore is to ask what the story proves. Does it prove customer access? Does it prove a strange insight about supply? Does it prove the team can survive low-margin operations long enough to build software leverage?",
+          "Great founder stories are not decorations on top of the business. They are evidence about why the business has a chance to compound.",
+          "That makes the current cycle quieter but more interesting. The founders worth following are often the ones telling less polished stories about the problems they know too well.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-data-and-agent-startups-funding",
+    category: "Funding",
+    title: "AI data and agent startups are turning demand into funding gravity",
+    dek: "Recent rounds for companies like Sierra, Wirestock, Exaforce, and specialist infrastructure startups show where investors think AI budgets are becoming repeatable.",
+    excerpt:
+      "The funding market is paying for the unglamorous layers behind AI adoption: data supply, security operations, customer agents, and inference efficiency.",
+    tag: "AI Funding",
+    date: "May 16, 2026",
+    publishedAt: "2026-05-16",
+    readTime: "8 min",
+    accent: "bg-slate-400",
+    image: {
+      src: "/articles/source-photos/venture-team-funding.jpg",
+      alt: "A venture team gathered in an office setting",
+      credit: "Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Atento_Capital_Team_Photo.jpg",
+    },
+    keywords: ["AI funding", "AI agents", "AI data", "venture capital"],
+    standfirst:
+      "AI funding is shifting from vague capability to budget ownership. The companies raising fresh capital are often the ones closest to data, security, customer operations, or compute cost.",
+    pullQuote:
+      "The next AI funding story is not only better models. It is the operational supply chain around them.",
+    sourceLinks: [
+      {
+        label: "Axios Pro Rata, May 5 funding notes",
+        url: "https://www.axios.com/newsletters/axios-pro-rata-dcefb62b-d63c-4b4a-9c2f-9b9ad9556a7a",
+      },
+      {
+        label: "Axios Pro Rata, May 14 funding notes",
+        url: "https://www.axios.com/newsletters/axios-pro-rata-894ef9e3-9e1f-4cf1-9f7c-7c1e2f57c968",
+      },
+      {
+        label: "TechCrunch on Exaforce's $125M Series B",
+        url: "https://techcrunch.com/2026/05/12/exaforce-raises-125m-series-b-to-build-ai-for-catching-and-stopping-cyberattacks-as-they-happen/",
+      },
+    ],
+    sections: [
+      {
+        heading: "AI budgets are becoming line items",
+        body: [
+          "The strongest AI startups in the current funding cycle are not merely promising intelligence. They are attaching themselves to budgets that already exist: customer support, security operations, data procurement, inference infrastructure, design production, and enterprise workflow automation.",
+          "That is why rounds for companies such as Sierra, Wirestock, Exaforce, Fractile, RadixArk, and other AI infrastructure or application startups matter as a group. They show investors looking for places where AI demand converts into recurring spend, not experimental curiosity.",
+          "The funding gravity is strongest where a startup can say exactly which cost it lowers or which bottleneck it removes. Abstract productivity stories still travel, but procurement teams increasingly want measured outcomes.",
+        ],
+      },
+      {
+        heading: "Data supply is becoming infrastructure",
+        body: [
+          "Wirestock's funding is a useful signal because data supply is not glamorous, but it is fundamental. As models push into image, video, audio, 3D, and real-world task understanding, labs need licensed, organized, high-quality inputs that can be shaped for specific model behavior.",
+          "That turns creator networks, annotation workflows, rights management, and quality control into venture-scale questions. A data supplier with contributor trust and enterprise sales discipline can become more than a marketplace; it can become part of the model development supply chain.",
+          "The risk is that the category becomes crowded and price sensitive. The durable companies will need more than access to contributors. They will need tooling, QA systems, domain specialization, and a reason customers keep returning for custom datasets.",
+        ],
+      },
+      {
+        heading: "Agents need accountability before autonomy",
+        body: [
+          "Customer-service agents, security agents, browser agents, and internal workflow agents all share the same adoption problem: companies want automation, but they also want permissioning, review, logs, fallback paths, and measurable reliability.",
+          "That is why investors are drawn to AI companies that look operationally specific. A generic assistant may be impressive, but a system that reduces support backlog, flags cyber incidents, drafts claims responses, or handles structured internal tasks maps more cleanly to a buyer and a budget.",
+          "The winners will make autonomy feel governed. They will not ask customers to trust magic; they will show what the system touched, why it acted, and how a human can intervene.",
+        ],
+      },
+      {
+        heading: "Infrastructure remains the tax collector",
+        body: [
+          "Even when the application layer gets the attention, infrastructure collects rent. Inference hardware, data-center cooling, model evaluation, routing, and security tooling all benefit as more AI products move from demos to production.",
+          "That is why AI funding keeps spilling into less visible layers. Every successful AI application creates pressure on cost, latency, data quality, and safety. Startups that solve those pressures can grow alongside the entire market.",
+          "The practical investor question is whether a startup owns a durable bottleneck or only a temporary gap. The practical founder question is similar: if the model improves tomorrow, does the company become more valuable, or does it disappear into the platform?",
         ],
       },
     ],
