@@ -62,33 +62,33 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 
 function PixelLogo() {
   return (
-    <span className="pixel-logo grid size-10 grid-cols-5 overflow-hidden border border-white/20 bg-[#070b16] shadow-[0_0_28px_rgba(5,217,232,0.22)]">
+    <span className="pixel-logo grid size-10 grid-cols-5 overflow-hidden border border-white/20 bg-[#0b0f18] ">
       {[
-        "bg-[#05d9e8]",
-        "bg-[#05d9e8]",
+        "bg-slate-200",
+        "bg-slate-300",
         "bg-transparent",
-        "bg-[#8b5cf6]",
-        "bg-[#8b5cf6]",
-        "bg-[#05d9e8]",
-        "bg-transparent",
-        "bg-white",
-        "bg-transparent",
-        "bg-[#8b5cf6]",
-        "bg-transparent",
-        "bg-white",
-        "bg-[#f8c14a]",
-        "bg-white",
-        "bg-transparent",
-        "bg-[#38e8a4]",
+        "bg-slate-500",
+        "bg-slate-400",
+        "bg-slate-300",
         "bg-transparent",
         "bg-white",
         "bg-transparent",
-        "bg-[#fb7185]",
-        "bg-[#38e8a4]",
-        "bg-[#38e8a4]",
+        "bg-slate-500",
         "bg-transparent",
-        "bg-[#fb7185]",
-        "bg-[#fb7185]",
+        "bg-white",
+        "bg-slate-300",
+        "bg-white",
+        "bg-transparent",
+        "bg-slate-500",
+        "bg-transparent",
+        "bg-white",
+        "bg-transparent",
+        "bg-slate-400",
+        "bg-slate-500",
+        "bg-slate-400",
+        "bg-transparent",
+        "bg-slate-300",
+        "bg-slate-500",
       ].map((color, index) => (
         <span key={`${color}-${index}`} className={color} />
       ))}
@@ -98,18 +98,18 @@ function PixelLogo() {
 
 function SiteHeader() {
   return (
-    <header className="border-b border-white/10 bg-[#050711]/90 backdrop-blur">
+    <header className="border-b border-white/10 bg-[#070910]/95 backdrop-blur">
       <nav className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-5 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Morvane home">
           <PixelLogo />
           <span className="font-mono text-2xl font-black uppercase tracking-[0.16em]">Morvane</span>
         </Link>
-        <div className="flex flex-wrap gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-slate-300">
+        <div className="flex flex-wrap gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-slate-400">
           {navItems.map((item) => (
             <Link
               key={item}
               href={`/#${item.toLowerCase().replaceAll(" ", "-")}`}
-              className="border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-cyan-300/60 hover:bg-cyan-300/10 hover:text-white"
+              className="border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-slate-300/40 hover:bg-white/[0.04] hover:text-white"
             >
               {item}
             </Link>
@@ -151,7 +151,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   };
 
   return (
-    <main className="space-field min-h-screen text-slate-100">
+    <main className="space-field min-h-screen text-slate-200">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -160,33 +160,33 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <SiteHeader />
 
         <article>
-          <header className={`border-b border-white/10 bg-gradient-to-br ${article.theme}`}>
+          <header className="border-b border-white/10 bg-[#0b101a]">
             <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_340px] lg:py-14">
               <div>
                 <Link
                   href="/"
-                  className="mb-7 inline-block border border-white/15 bg-black/30 px-3 py-2 font-mono text-xs font-black uppercase tracking-[0.14em] text-cyan-100 backdrop-blur transition hover:border-cyan-200 hover:bg-cyan-200 hover:text-[#050711]"
+                  className="mb-7 inline-block border border-white/15 bg-black/30 px-3 py-2 font-mono text-xs font-black uppercase tracking-[0.14em] text-slate-200 backdrop-blur transition hover:border-slate-300 hover:bg-slate-200 hover:text-[#070910]"
                 >
                   Back to feed
                 </Link>
                 <div className="mb-6 flex flex-wrap gap-3 font-mono text-xs font-black uppercase tracking-[0.14em] text-slate-200">
-                  <span className="text-cyan-100">{article.category}</span>
+                  <span className="text-slate-200">{article.category}</span>
                   <span>{article.date}</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h1 className="max-w-5xl text-4xl font-black leading-[0.94] text-white sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-5xl text-4xl font-black leading-[0.94] text-slate-50 sm:text-6xl lg:text-7xl">
                   {article.title}
                 </h1>
-                <p className="mt-7 max-w-3xl text-xl leading-8 text-slate-100">{article.dek}</p>
+                <p className="mt-7 max-w-3xl text-xl leading-8 text-slate-200">{article.dek}</p>
               </div>
-              <div className="relative min-h-72 overflow-hidden border border-white/15 bg-[#071322] shadow-[0_0_60px_rgba(5,217,232,0.14)]">
+              <div className="relative min-h-72 overflow-hidden border border-white/15 bg-[#0b111d] ">
                 <Image
                   src={article.image.src}
                   alt={article.image.alt}
                   fill
                   priority
                   sizes="(min-width: 1024px) 340px, 100vw"
-                  className="object-cover"
+                  className="cover-image object-cover"
                 />
               </div>
             </div>
@@ -194,7 +194,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[minmax(0,760px)_320px]">
             <div>
-              <p className="border-l-4 border-cyan-200 bg-white/[0.06] p-6 text-2xl font-black leading-9 text-white backdrop-blur">
+              <p className="border-l-4 border-slate-300 bg-white/[0.04] p-6 text-2xl font-black leading-9 text-white backdrop-blur">
                 {article.standfirst}
               </p>
 
@@ -211,16 +211,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             <aside className="space-y-5">
-              <div className="border border-white/10 bg-white/[0.06] p-5 backdrop-blur">
-                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-cyan-200">
+              <div className="border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
+                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
                   Pull Quote
                 </p>
-                <p className="mt-4 text-2xl font-black leading-tight text-white">
+                <p className="mt-4 text-2xl font-black leading-tight text-slate-50">
                   {article.pullQuote}
                 </p>
               </div>
-              <div className="border border-white/10 bg-[#071322] p-5">
-                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-cyan-200">
+              <div className="border border-white/10 bg-[#0b111d] p-5">
+                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
                   Related
                 </p>
                 <div className="mt-4 space-y-4">
@@ -228,12 +228,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     <Link
                       key={related.slug}
                       href={`/articles/${related.slug}`}
-                      className="block border-t border-white/10 pt-4 transition hover:text-cyan-100"
+                      className="block border-t border-white/10 pt-4 transition hover:text-slate-200"
                     >
                       <p className="font-mono text-xs font-black uppercase tracking-[0.12em] text-slate-400">
                         {related.category}
                       </p>
-                      <h3 className="mt-2 text-lg font-black leading-tight text-white">
+                      <h3 className="mt-2 text-lg font-black leading-tight text-slate-50">
                         {related.title}
                       </h3>
                     </Link>

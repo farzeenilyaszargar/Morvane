@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050711;
-  --foreground: #f5f7fb;
+  --background: #070910;
+  --foreground: #f1f4f8;
 }
 
 @theme inline {
@@ -23,28 +23,24 @@ body {
 }
 
 ::selection {
-  background: #05d9e8;
-  color: #050711;
+  background: #d7e5f7;
+  color: #070910;
 }
 
 .space-field {
   background:
-    radial-gradient(circle at 12% 18%, rgba(5, 217, 232, 0.18), transparent 28%),
-    radial-gradient(circle at 86% 8%, rgba(139, 92, 246, 0.22), transparent 26%),
-    radial-gradient(circle at 75% 82%, rgba(248, 193, 74, 0.11), transparent 26%),
-    linear-gradient(180deg, #050711 0%, #080d1d 46%, #050711 100%);
+    radial-gradient(circle at 16% 14%, rgba(95, 117, 148, 0.1), transparent 30%),
+    radial-gradient(circle at 84% 6%, rgba(80, 89, 128, 0.12), transparent 28%),
+    linear-gradient(180deg, #070910 0%, #0a0e17 48%, #070910 100%);
 }
 
 .star-noise {
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.45) 1px, transparent 1.5px),
-    radial-gradient(circle, rgba(5, 217, 232, 0.3) 1px, transparent 1.5px);
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1.4px);
   background-position:
-    0 0,
-    21px 29px;
+    0 0;
   background-size:
-    56px 56px,
-    83px 83px;
+    92px 92px;
 }
 
 .pixel-logo {
@@ -52,7 +48,7 @@ body {
 }
 
 .article-prose {
-  color: #d8deea;
+  color: #d6dce6;
 }
 
 .article-prose section + section {
@@ -71,6 +67,10 @@ body {
   font-size: 1.08rem;
   line-height: 1.9;
   margin-top: 1rem;
+}
+
+.cover-image {
+  filter: saturate(0.64) brightness(0.78) contrast(0.96);
 }
 
 .border-3 {
