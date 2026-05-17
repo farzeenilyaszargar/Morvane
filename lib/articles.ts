@@ -28,7 +28,100 @@ export type Article = {
   pullQuote: string;
 };
 
+export type ExternalLink = {
+  label: string;
+  url: string;
+};
+
 export const navItems = ["AI", "Startups", "Funding", "Security", "Chips", "Product"];
+
+export const mentionedLinksBySlug: Record<string, ExternalLink[]> = {
+  "enterprise-ai-service-businesses": [
+    { label: "OpenAI", url: "https://openai.com/" },
+    { label: "Anthropic", url: "https://www.anthropic.com/" },
+    { label: "Microsoft AI", url: "https://www.microsoft.com/ai" },
+  ],
+  "ai-chip-challengers-2027-silicon": [
+    { label: "NVIDIA", url: "https://www.nvidia.com/" },
+    { label: "AMD AI", url: "https://www.amd.com/en/solutions/ai.html" },
+    { label: "Cerebras", url: "https://www.cerebras.ai/" },
+  ],
+  "defense-startups-platform-valuations": [
+    { label: "Anduril", url: "https://www.anduril.com/" },
+    { label: "Helsing", url: "https://helsing.ai/" },
+    { label: "Quantum Systems", url: "https://quantum-systems.com/" },
+  ],
+  "ai-security-shadow-tool-problem": [
+    { label: "Exaforce", url: "https://www.exaforce.com/" },
+    { label: "Wiz", url: "https://www.wiz.io/" },
+    { label: "Palo Alto Networks", url: "https://www.paloaltonetworks.com/" },
+  ],
+  "answer-engine-discovery-without-snake-oil": [
+    { label: "Schema.org", url: "https://schema.org/" },
+    { label: "Google Search Central", url: "https://developers.google.com/search" },
+    { label: "Bing Webmaster Tools", url: "https://www.bing.com/webmasters" },
+  ],
+  "ai-apps-less-chatty-more-invisible": [
+    { label: "Linear", url: "https://linear.app/" },
+    { label: "Notion", url: "https://www.notion.com/" },
+    { label: "Figma", url: "https://www.figma.com/" },
+  ],
+  "data-centers-power-hungry-compute": [
+    { label: "CoreWeave", url: "https://www.coreweave.com/" },
+    { label: "Equinix", url: "https://www.equinix.com/" },
+    { label: "Uptime Institute", url: "https://uptimeinstitute.com/" },
+  ],
+  "open-source-ai-infrastructure-stack": [
+    { label: "Hugging Face", url: "https://huggingface.co/" },
+    { label: "LangChain", url: "https://www.langchain.com/" },
+    { label: "Kubernetes", url: "https://kubernetes.io/" },
+  ],
+  "warehouse-robots-software-layer": [
+    { label: "Ocado Technology", url: "https://www.ocadogroup.com/technology/" },
+    { label: "Amazon Robotics", url: "https://www.amazonrobotics.com/" },
+    { label: "AutoStore", url: "https://www.autostoresystem.com/" },
+  ],
+  "browser-agents-enterprise-workflows": [
+    { label: "Browserbase", url: "https://www.browserbase.com/" },
+    { label: "Playwright", url: "https://playwright.dev/" },
+    { label: "Chrome for Developers", url: "https://developer.chrome.com/" },
+  ],
+  "grid-software-climate-tech": [
+    { label: "Grid Status", url: "https://www.gridstatus.io/" },
+    { label: "Electric Power Research Institute", url: "https://www.epri.com/" },
+    { label: "U.S. Department of Energy Grid Deployment Office", url: "https://www.energy.gov/gdo/grid-deployment-office" },
+  ],
+  "personal-ai-hardware-second-screen": [
+    { label: "Meta Ray-Ban", url: "https://www.ray-ban.com/usa/ray-ban-meta-smart-glasses" },
+    { label: "Humane", url: "https://hu.ma.ne/" },
+    { label: "Rabbit", url: "https://www.rabbit.tech/" },
+  ],
+  "venture-megarounds-reshape-startup-market": [
+    { label: "PitchBook", url: "https://pitchbook.com/" },
+    { label: "NVCA", url: "https://nvca.org/" },
+    { label: "Crunchbase", url: "https://www.crunchbase.com/" },
+    { label: "OpenAI", url: "https://openai.com/" },
+    { label: "SpaceX", url: "https://www.spacex.com/" },
+    { label: "Anthropic", url: "https://www.anthropic.com/" },
+  ],
+  "physical-world-startups-funding-premium": [
+    { label: "Anduril", url: "https://www.anduril.com/" },
+    { label: "TechCrunch", url: "https://techcrunch.com/" },
+    { label: "Crunchbase", url: "https://www.crunchbase.com/" },
+  ],
+  "rapido-wirestock-founder-lore": [
+    { label: "Rapido", url: "https://www.rapido.bike/" },
+    { label: "Wirestock", url: "https://wirestock.io/" },
+    { label: "TechCrunch", url: "https://techcrunch.com/" },
+  ],
+  "ai-data-and-agent-startups-funding": [
+    { label: "Sierra", url: "https://sierra.ai/" },
+    { label: "Wirestock", url: "https://wirestock.io/" },
+    { label: "Exaforce", url: "https://www.exaforce.com/" },
+    { label: "Fractile", url: "https://www.fractile.ai/" },
+    { label: "Axios Pro Rata", url: "https://www.axios.com/newsletters/pro-rata" },
+  ],
+};
 
 export const articles: Article[] = [
   {

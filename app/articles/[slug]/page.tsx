@@ -4,7 +4,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { articles, getArticleBySlug, getRelatedArticles } from "@/lib/articles";
+import {
+  articles,
+  getArticleBySlug,
+  getRelatedArticles,
+  mentionedLinksBySlug,
+} from "@/lib/articles";
 
 const siteUrl = "https://morvane.space";
 
@@ -72,6 +77,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }
 
   const relatedArticles = getRelatedArticles(article.slug);
+  const mentionedLinks = mentionedLinksBySlug[article.slug] ?? [];
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -83,6 +89,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     keywords: article.keywords.join(", "),
     mainEntityOfPage: `${siteUrl}/articles/${article.slug}`,
     image: `${siteUrl}${article.image.src}`,
+    mentions: mentionedLinks.map((link) => ({
+      "@type": "Thing",
+      name: link.label,
+      url: link.url,
+    })),
     author: {
       "@type": "Organization",
       name: "Morvane Editorial",
@@ -137,7 +148,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   href={article.image.creditUrl}
                   className="mt-3 block font-mono text-[0.65rem] font-bold uppercase tracking-[0.12em] text-slate-500 transition hover:text-slate-300"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener"
                 >
                   Image: {article.image.credit}
                 </a>
@@ -183,10 +194,30 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         key={source.url}
                         href={source.url}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener"
                         className="block border-t border-white/10 pt-3 text-sm font-bold leading-6 text-slate-300 transition first:border-t-0 first:pt-0 hover:text-white"
                       >
                         {source.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+              {mentionedLinks.length > 0 ? (
+                <div className="border border-white/10 bg-[#0b111d] p-5">
+                  <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+                    Outbound Links
+                  </p>
+                  <div className="mt-4 grid gap-2">
+                    {mentionedLinks.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener"
+                        className="border border-white/10 px-3 py-2 text-sm font-bold text-slate-300 transition hover:border-slate-300/30 hover:bg-white/[0.04] hover:text-white"
+                      >
+                        {link.label}
                       </a>
                     ))}
                   </div>
