@@ -50,11 +50,11 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <nav className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-5 sm:px-8 lg:flex-row lg:items-end lg:justify-between">
+      <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:px-8 lg:flex-row lg:items-end lg:justify-between">
         <Link href="/" className="group flex w-fit items-center gap-4" aria-label="Morvane home">
           <PixelLogo />
           <span>
-            <span className="block font-mono text-3xl font-black uppercase leading-none tracking-[0.18em] text-slate-50 transition group-hover:text-white">
+            <span className="block font-mono text-2xl font-black uppercase leading-none tracking-[0.18em] text-slate-50 transition group-hover:text-white sm:text-3xl">
               Morvane
             </span>
             <span className="mt-1 block font-mono text-[0.66rem] font-bold uppercase tracking-[0.2em] text-slate-500">
@@ -63,7 +63,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <div className="flex gap-2 overflow-x-auto border-y border-white/10 py-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-slate-400 lg:border-y-0 lg:py-0">
+        <div className="flex gap-2 overflow-x-auto border-y border-white/10 py-2 font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-slate-400 lg:border-y-0 lg:py-0">
           {navItems.map((item) => (
             <Link
               key={item}

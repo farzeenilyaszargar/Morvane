@@ -81,25 +81,27 @@ export default function Home() {
         <SiteHeader />
 
         <section className="border-b border-white/10">
-          <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:py-10">
-            <div className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
+          <div className="mx-auto max-w-7xl px-5 py-3 sm:px-8 lg:py-5">
+            <div className="grid gap-3 lg:grid-cols-[1.18fr_0.82fr]">
               <Link
                 href={`/articles/${lead.slug}`}
-                className="group grid min-h-[520px] overflow-hidden border border-white/10 bg-white/[0.035] backdrop-blur transition hover:border-slate-300/30 hover:bg-white/[0.05] lg:grid-cols-[0.92fr_1.08fr]"
+                className="group grid overflow-hidden border border-white/10 bg-white/[0.035] backdrop-blur transition hover:border-slate-300/30 hover:bg-white/[0.05] lg:grid-cols-[1fr_0.86fr]"
               >
-                <div className="order-2 flex flex-col justify-between p-6 sm:p-8 lg:order-1">
+                <div className="order-2 flex flex-col justify-between p-4 lg:order-1">
                   <div>
                     <ArticleMeta category={lead.category} date={lead.date} />
-                    <h1 className="mt-5 max-w-3xl text-4xl font-black leading-[0.94] text-slate-50 group-hover:text-slate-200 sm:text-6xl lg:text-7xl">
+                    <h1 className="mt-3 max-w-3xl text-2xl font-black leading-[0.98] text-slate-50 group-hover:text-slate-200 sm:text-3xl lg:text-4xl">
                       {lead.title}
                     </h1>
-                    <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">{lead.dek}</p>
+                    <p className="mt-3 hidden max-w-2xl text-sm leading-6 text-slate-400 sm:block sm:text-base sm:leading-7">
+                      {lead.dek}
+                    </p>
                   </div>
-                  <p className="mt-10 font-mono text-sm font-black uppercase tracking-[0.14em] text-slate-400">
+                  <p className="mt-3 font-mono text-xs font-black uppercase tracking-[0.14em] text-slate-400">
                     Read feature / {lead.readTime}
                   </p>
                 </div>
-                <div className="relative order-1 min-h-72 overflow-hidden border-b border-white/10 bg-[#0b111d] lg:order-2 lg:border-b-0 lg:border-l">
+                <div className="relative order-1 h-28 overflow-hidden border-b border-white/10 bg-[#0b111d] sm:h-40 lg:order-2 lg:h-auto lg:min-h-64 lg:border-b-0 lg:border-l">
                   <Image
                     src={lead.image.src}
                     alt={lead.image.alt}
@@ -111,15 +113,15 @@ export default function Home() {
                 </div>
               </Link>
 
-              <div className="grid gap-5">
+              <div className="grid gap-2">
                 {sideStories.map((article) => (
                   <Link
                     key={article.slug}
                     href={`/articles/${article.slug}`}
-                    className="group flex min-h-60 flex-col justify-between border border-white/10 bg-white/[0.035] p-5 backdrop-blur transition hover:border-slate-300/30 hover:bg-white/[0.05]"
+                    className="group grid grid-cols-[76px_1fr] gap-3 border border-white/10 bg-white/[0.035] p-2.5 backdrop-blur transition hover:border-slate-300/30 hover:bg-white/[0.05] sm:grid-cols-[108px_1fr] lg:grid-cols-[96px_1fr] xl:grid-cols-[116px_1fr]"
                   >
                     <div>
-                      <div className="relative mb-5 aspect-[16/9] overflow-hidden border border-white/10 bg-[#0b111d]">
+                      <div className="relative h-full min-h-20 overflow-hidden border border-white/10 bg-[#0b111d]">
                         <Image
                           src={article.image.src}
                           alt={article.image.alt}
@@ -128,16 +130,21 @@ export default function Home() {
                           className="cover-image object-cover transition duration-500 group-hover:scale-[1.02]"
                         />
                       </div>
-                      <span className={`${article.accent} mb-5 block h-1 w-20`} />
-                      <ArticleMeta category={article.category} date={article.date} />
-                      <h2 className="mt-4 text-2xl font-black leading-tight text-slate-50 group-hover:text-slate-200">
-                        {article.title}
-                      </h2>
-                      <p className="mt-4 leading-7 text-slate-400">{article.excerpt}</p>
                     </div>
-                    <p className="mt-5 font-mono text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
-                      {article.readTime}
-                    </p>
+                    <div className="flex flex-col justify-between">
+                      <div>
+                        <ArticleMeta category={article.category} date={article.date} />
+                        <h2 className="mt-1.5 text-sm font-black leading-tight text-slate-50 group-hover:text-slate-200 sm:text-base">
+                          {article.title}
+                        </h2>
+                        <p className="mt-2 hidden text-sm leading-6 text-slate-400 xl:block">
+                          {article.excerpt}
+                        </p>
+                      </div>
+                      <p className="mt-2 font-mono text-[0.66rem] font-bold uppercase tracking-[0.14em] text-slate-400">
+                        {article.readTime}
+                      </p>
+                    </div>
                   </Link>
                 ))}
               </div>
