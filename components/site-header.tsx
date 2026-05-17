@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/articles";
 
 function PixelLogo() {
@@ -41,8 +44,49 @@ function PixelLogo() {
 }
 
 export function SiteHeader() {
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
+    function updateHeader() {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollY.current;
+
+      if (currentScrollY < 80) {
+        setIsHidden(false);
+      } else if (delta > 8) {
+        setIsHidden(true);
+      } else if (delta < -8) {
+        setIsHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+      ticking.current = false;
+    }
+
+    function onScroll() {
+      if (!ticking.current) {
+        window.requestAnimationFrame(updateHeader);
+        ticking.current = true;
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-30 border-b border-white/10 bg-[#070910]/95 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-30 border-b border-white/10 bg-[#070910]/95 backdrop-blur-md transition-transform duration-300 ease-out will-change-transform ${
+        isHidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="border-b border-white/10 bg-black/20">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-2 font-mono text-[0.68rem] font-bold uppercase tracking-[0.18em] text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>Morvane.space</span>
