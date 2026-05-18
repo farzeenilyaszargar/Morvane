@@ -296,27 +296,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
-              <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
-                Editor&apos;s Board
-              </p>
-              <h2 className="mt-3 text-3xl font-black leading-tight text-slate-50">
-                How we choose stories
-              </h2>
-              <ul className="mt-5 space-y-4 text-slate-400">
-                {[
-                  "Original signal over recycled takes.",
-                  "Concrete numbers, dates, and named markets.",
-                  "Readable context before hot reactions.",
-                  "Pages structured for fast scanning and deep reading.",
-                ].map((brief) => (
-                  <li key={brief} className="flex gap-3 leading-6">
-                    <span className="mt-2 size-2 shrink-0 bg-slate-200" />
-                    <span>{brief}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
             <div id="newsletter" className="border border-white/10 bg-[#0b111d] p-5">
               <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
                 Newsletter
