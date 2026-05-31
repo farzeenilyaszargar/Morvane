@@ -317,37 +317,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f7f7f2] px-5 py-16 text-[#10130f] sm:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
-              {featuredVideo.kicker}
-            </p>
-            <h2 className="mt-4 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-6xl">
-              {featuredVideo.title}
+      <section className="border-t border-[#10130f]/10 bg-[#f7f7f2] px-5 py-20 text-[#10130f] sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 flex items-end justify-between">
+            <h2 className="text-4xl font-black leading-[0.92] tracking-[-0.04em] text-[#0077C8] sm:text-5xl">
+              Watch
             </h2>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-[#4a5046]">
-              {featuredVideo.description}
-            </p>
-            <a
-              href={featuredVideo.href}
-              target="_blank"
-              rel="noopener"
-              className="mt-6 inline-block text-sm font-black uppercase tracking-[0.08em] text-[#0077C8] transition hover:text-[#10130f]"
-            >
-              Watch on YouTube
-            </a>
           </div>
 
-          <div className="overflow-hidden bg-black shadow-[0_18px_50px_rgba(16,19,15,0.18)]">
-            <iframe
-              className="aspect-video w-full"
-              src={featuredVideo.embedUrl}
-              title={`${featuredVideo.title} - ${featuredVideo.source}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
+                {featuredVideo.kicker}
+              </p>
+              <h3 className="mt-4 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-6xl">
+                {featuredVideo.title}
+              </h3>
+              <p className="mt-5 max-w-xl text-lg leading-8 text-[#4a5046]">
+                {featuredVideo.description}
+              </p>
+              <a
+                href={featuredVideo.href}
+                target="_blank"
+                rel="noopener"
+                className="mt-6 inline-block text-sm font-black uppercase tracking-[0.08em] text-[#0077C8] transition hover:text-[#10130f]"
+              >
+                Watch on YouTube
+              </a>
+            </div>
+
+            <div className="overflow-hidden bg-black shadow-[0_18px_50px_rgba(16,19,15,0.18)]">
+              <iframe
+                className="aspect-video w-full"
+                src={featuredVideo.embedUrl}
+                title={`${featuredVideo.title} - ${featuredVideo.source}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
