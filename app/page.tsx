@@ -85,7 +85,7 @@ function LeadCard({ article }: { article: (typeof articles)[number] }) {
       href={`/articles/${article.slug}`}
       className="group block"
     >
-      <div className="relative min-h-[320px] overflow-hidden bg-[#006bb4] sm:min-h-[420px] lg:min-h-[470px]">
+      <div className="relative min-h-[260px] overflow-hidden bg-[#006bb4] sm:min-h-[340px] lg:min-h-[390px]">
         <Image
           src={article.image.src}
           alt={article.image.alt}
