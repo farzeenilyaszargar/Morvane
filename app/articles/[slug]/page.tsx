@@ -127,8 +127,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </h1>
                 <p className="mt-7 max-w-3xl text-xl leading-8 text-[#4a5046]">{article.dek}</p>
               </div>
-              <div>
-                <div className="relative min-h-72 overflow-hidden border border-[#10130f]/20 bg-[#e8ebe2]">
+              <div className="self-center">
+                <div className="relative mx-auto min-h-72 w-full max-w-[360px] overflow-hidden border border-[#10130f]/20 bg-[#e8ebe2]">
                   <Image
                     src={article.image.src}
                     alt={article.image.alt}
