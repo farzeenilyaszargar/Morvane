@@ -96,12 +96,7 @@ function LeadCard({ article }: { article: (typeof articles)[number] }) {
         />
       </div>
       <div className="mt-6">
-        <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-white/75">
-          <span className="text-white">{article.category}</span>
-          <span>{article.date}</span>
-          <span>{article.readTime}</span>
-        </div>
-        <h1 className="mt-4 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.055em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl lg:text-7xl">
+        <h1 className="max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.055em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl lg:text-7xl">
           {article.title}
         </h1>
         <p className="mt-5 max-w-3xl text-xl leading-8 text-white/82">{article.dek}</p>
@@ -116,11 +111,7 @@ function HeroHeadlineLink({ article }: { article: (typeof articles)[number] }) {
       href={`/articles/${article.slug}`}
       className="group block border-t border-white/25 py-4 first:border-t-0 first:pt-0"
     >
-      <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-white/65">
-        <span className="text-white">{article.category}</span>
-        <span>{article.date}</span>
-      </div>
-      <h3 className="mt-2 text-xl font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff]">
+      <h3 className="text-xl font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff]">
         {article.title}
       </h3>
     </Link>
