@@ -73,28 +73,28 @@ function LeadCard({ article }: { article: (typeof articles)[number] }) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group grid gap-7 lg:grid-cols-[minmax(0,1fr)_0.82fr] lg:items-end"
+      className="group block"
     >
-      <div>
-        <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-white/75">
-          <span className="text-white">{article.category}</span>
-          <span>{article.date}</span>
-          <span>{article.readTime}</span>
-        </div>
-        <h1 className="mt-4 max-w-4xl text-5xl font-black leading-[0.88] tracking-[-0.055em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl lg:text-7xl">
-          {article.title}
-        </h1>
-        <p className="mt-5 max-w-2xl text-lg leading-8 text-white/82">{article.dek}</p>
-      </div>
-      <div className="relative min-h-[300px] overflow-hidden border border-white/25 bg-[#006bb4]">
+      <div className="relative min-h-[320px] overflow-hidden bg-[#006bb4] sm:min-h-[420px] lg:min-h-[470px]">
         <Image
           src={article.image.src}
           alt={article.image.alt}
           fill
           priority
-          sizes="(min-width: 1024px) 52vw, 100vw"
+          sizes="(min-width: 1024px) 62vw, 100vw"
           className="cover-image object-cover transition duration-500 group-hover:scale-[1.02]"
         />
+      </div>
+      <div className="mt-6">
+        <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-white/75">
+          <span className="text-white">{article.category}</span>
+          <span>{article.date}</span>
+          <span>{article.readTime}</span>
+        </div>
+        <h1 className="mt-4 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.055em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl lg:text-7xl">
+          {article.title}
+        </h1>
+        <p className="mt-5 max-w-3xl text-xl leading-8 text-white/82">{article.dek}</p>
       </div>
     </Link>
   );
