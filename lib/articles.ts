@@ -29,6 +29,11 @@ export type Article = {
   sourceLinks?: ExternalLink[];
   mentionedLinks?: ExternalLink[];
   pullQuote: string;
+  seo?: {
+    title: string;
+    description: string;
+    priority?: number;
+  };
 };
 
 export const navItems = ["Latest", "Startups", "Venture", "AI", "Security", "Apps"];
@@ -151,6 +156,12 @@ export const articles: Article[] = [
     accent: "bg-[#00A2FF]",
     image: images.product,
     keywords: ["AI companions", "AI safety", "product design", "chatbots"],
+    seo: {
+      title: "AI companion safety, chatbot design, and the product reckoning",
+      description:
+        "Morvane analyzes why AI companion apps are pushing chatbot safety, product design, emotional dependency, and trust into the center of AI company roadmaps.",
+      priority: 0.9,
+    },
     standfirst:
       "The most important AI interface question is no longer whether a model can respond fluently. It is whether the product understands the emotional weight of being always available.",
     pullQuote:
@@ -313,6 +324,12 @@ export const articles: Article[] = [
     accent: "bg-[#00A2FF]",
     image: images.code,
     keywords: ["Nap", "Indian startups", "AI coding tools", "enterprise software engineering"],
+    seo: {
+      title: "Nap, the Indian AI coding startup, targets secure enterprise code",
+      description:
+        "A deep look at Nap, an emerging Indian startup helping engineering teams generate secure, production-ready code while reducing unreliable AI-generated output.",
+      priority: 0.95,
+    },
     standfirst:
       "As AI coding tools move deeper into enterprise workflows, the next fight is not only about speed. It is about trust, security, reviewability, and whether generated code can survive production standards.",
     pullQuote:
@@ -502,6 +519,12 @@ export const articles: Article[] = [
     accent: "bg-[#00A2FF]",
     image: images.founders,
     keywords: ["angel funds", "startup operators", "venture capital", "Snap alumni"],
+    seo: {
+      title: "Operator-led angel funds are reshaping startup capital",
+      description:
+        "Morvane explains how operator-led angel funds are becoming practical startup distribution networks for early customers, hiring, credibility, and venture follow-on.",
+      priority: 0.88,
+    },
     standfirst:
       "Early capital is becoming bundled with operator access. For founders, the best small checks can behave like distribution.",
     pullQuote:
@@ -610,6 +633,12 @@ export const articles: Article[] = [
     accent: "bg-[#00A2FF]",
     image: images.security,
     keywords: ["AI security", "cybersecurity", "SOC automation", "Exaforce"],
+    seo: {
+      title: "AI security startups race toward real-time cyber defense",
+      description:
+        "A Morvane analysis of AI security startups, SOC automation, real-time defense, enterprise guardrails, and the trust layer behind autonomous cybersecurity tools.",
+      priority: 0.86,
+    },
     standfirst:
       "Security teams do not need another stream of clever alerts. They need systems that reduce time to understand and time to act.",
     pullQuote:

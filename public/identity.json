@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "@id": "https://morvane.space/#organization",
+  "name": "Morvane",
+  "legalName": "Morvane Media LLC",
+  "url": "https://morvane.space",
+  "logo": "https://morvane.space/logo.svg",
+  "email": "hello@morvane.space",
+  "foundingDate": "2026",
+  "publishingPrinciples": "https://morvane.space/terms",
+  "knowsAbout": [
+    "technology",
+    "startups",
+    "venture capital",
+    "artificial intelligence",
+    "cybersecurity",
+    "apps",
+    "developer tools",
+    "AI infrastructure",
+    "enterprise software"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@morvane.space",
+    "contactType": "editorial",
+    "availableLanguage": ["English"]
+  }
+}

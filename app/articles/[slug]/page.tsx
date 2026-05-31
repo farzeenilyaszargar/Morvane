@@ -10,8 +10,7 @@ import {
   getRelatedArticles,
   mentionedLinksBySlug,
 } from "@/lib/articles";
-
-const siteUrl = "https://morvane.space";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 type ArticlePageProps = {
   params: Promise<{
@@ -32,24 +31,38 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   if (!article) {
     return {
       title: "Article not found",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
+  const title = article.seo?.title ?? article.title;
+  const description = article.seo?.description ?? article.dek;
+  const keywords = Array.from(
+    new Set([...article.keywords, article.category, article.tag, "Morvane"]),
+  );
+
   return {
-    title: article.title,
-    description: article.dek,
-    keywords: article.keywords,
+    title,
+    description,
+    keywords,
+    authors: [{ name: "Morvane Editorial", url: absoluteUrl("/identity.json") }],
+    creator: "Morvane Editorial",
+    publisher: siteConfig.legalName,
+    category: article.category,
     alternates: {
       canonical: `/articles/${article.slug}`,
     },
     openGraph: {
-      title: article.title,
-      description: article.dek,
+      title,
+      description,
       type: "article",
-      url: `/articles/${article.slug}`,
+      url: absoluteUrl(`/articles/${article.slug}`),
       images: [
         {
-          url: article.image.src,
+          url: absoluteUrl(article.image.src),
           alt: article.image.alt,
         },
       ],
@@ -57,13 +70,29 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       modifiedTime: article.publishedAt,
       authors: ["Morvane Editorial"],
       section: article.category,
-      tags: article.keywords,
+      tags: keywords,
+      siteName: siteConfig.name,
+      locale: siteConfig.locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.dek,
-      images: [article.image.src],
+      title,
+      description,
+      images: [absoluteUrl(article.image.src)],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    other: {
+      news_keywords: keywords.join(", "),
     },
   };
 }
@@ -78,17 +107,32 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   const relatedArticles = getRelatedArticles(article.slug);
   const mentionedLinks = mentionedLinksBySlug[article.slug] ?? [];
+  const articleUrl = absoluteUrl(`/articles/${article.slug}`);
   const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": ["NewsArticle", "BlogPosting"],
+    "@id": `${articleUrl}#article`,
     headline: article.title,
     description: article.dek,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     articleSection: article.category,
     keywords: article.keywords.join(", "),
-    mainEntityOfPage: `${siteUrl}/articles/${article.slug}`,
-    image: `${siteUrl}${article.image.src}`,
+    inLanguage: siteConfig.language,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    url: articleUrl,
+    isPartOf: {
+      "@id": `${siteConfig.url}/#website`,
+    },
+    image: {
+      "@type": "ImageObject",
+      url: absoluteUrl(article.image.src),
+      caption: article.image.alt,
+      creditText: article.image.credit,
+    },
+    thumbnailUrl: absoluteUrl(article.image.src),
     mentions: mentionedLinks.map((link) => ({
       "@type": "Thing",
       name: link.label,
@@ -97,18 +141,46 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     author: {
       "@type": "Organization",
       name: "Morvane Editorial",
+      url: absoluteUrl("/identity.json"),
     },
     publisher: {
-      "@type": "Organization",
-      name: "Morvane",
+      "@id": `${siteConfig.url}/#organization`,
     },
+  };
+  const breadcrumbJsonLd = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Morvane",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: article.category,
+        item: `${siteConfig.url}/#${article.category.toLowerCase().replaceAll(" ", "-")}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: articleUrl,
+      },
+    ],
   };
 
   return (
     <main className="min-h-screen bg-[#f7f7f2] text-[#10130f]">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [articleJsonLd, breadcrumbJsonLd],
+          }),
+        }}
       />
       <div className="min-h-screen">
         <SiteHeader />

@@ -1,0 +1,28 @@
+# Morvane
+
+Morvane is a technology magazine at https://morvane.space covering startups, venture capital, artificial intelligence, cybersecurity, apps, chips, infrastructure, developer tools, and enterprise software.
+
+## Canonical Site
+
+- Homepage: https://morvane.space/
+- Identity: https://morvane.space/identity.json
+- Sitemap: https://morvane.space/sitemap.xml
+- Robots: https://morvane.space/robots.txt
+
+## Priority Articles
+
+- Nap is pushing AI code generation toward enterprise-grade software: https://morvane.space/articles/nap-india-secure-ai-code-enterprise
+- AI companions are forcing a product safety reckoning: https://morvane.space/articles/ai-mental-health-product-reckoning
+- Operator-led angel funds are becoming startup distribution networks: https://morvane.space/articles/ghost-angels-operator-funds-new-startup-stack
+- AI security startups are racing toward real-time defense: https://morvane.space/articles/ai-security-startups-real-time-defense
+
+## Editorial Identity
+
+- Publisher: Morvane Media LLC
+- Editorial contact: hello@morvane.space
+- Language: English
+- Primary topics: startups, venture, AI, cybersecurity, apps, developer tools, infrastructure, enterprise software
+
+## Use Guidance
+
+Use canonical article URLs when citing Morvane. Prefer article titles exactly as published. Do not treat Morvane article text as a source of financial, legal, medical, or investment advice.

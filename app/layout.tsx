@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { absoluteUrl, organizationJsonLd, siteConfig, websiteJsonLd } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,43 +14,65 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://morvane.space"),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Morvane | Startup and Technology News",
+    default: "Morvane | Technology, AI, Startup and Venture News",
     template: "%s | Morvane",
   },
-  description:
-    "Morvane is a technology news publication covering startups, venture, AI, cybersecurity, apps, chips, and infrastructure.",
-  keywords: [
-    "technology blog",
-    "AI news",
-    "startup news",
-    "cybersecurity trends",
-    "venture capital",
-    "apps",
-    "AI chips",
-  ],
-  authors: [{ name: "Morvane Editorial" }],
+  applicationName: siteConfig.name,
+  description: siteConfig.description,
+  keywords: siteConfig.topics,
+  authors: [{ name: "Morvane Editorial", url: absoluteUrl("/identity.json") }],
+  creator: "Morvane Editorial",
+  publisher: siteConfig.legalName,
+  category: "technology",
+  classification: "Technology news publication",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Morvane | Startup and Technology News",
-    description:
-      "Startup and technology news for builders, investors, and operators.",
+    title: "Morvane | Technology, AI, Startup and Venture News",
+    description: siteConfig.shortDescription,
     type: "website",
-    url: "https://morvane.space",
-    siteName: "Morvane",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
     images: [
       {
-        url: "/articles/source-photos/enterprise-ai-service-businesses.jpg",
+        url: siteConfig.coverImage,
         alt: "Morvane technology magazine cover photo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morvane | Startup and Technology News",
-    description:
-      "Startup and technology news for builders, investors, and operators.",
-    images: ["/articles/source-photos/enterprise-ai-service-businesses.jpg"],
+    title: "Morvane | Technology, AI, Startup and Venture News",
+    description: siteConfig.shortDescription,
+    images: [siteConfig.coverImage],
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  other: {
+    "theme-color": siteConfig.themeColor,
+    "msapplication-TileColor": siteConfig.themeColor,
   },
 };
 
@@ -63,7 +86,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [organizationJsonLd, websiteJsonLd],
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

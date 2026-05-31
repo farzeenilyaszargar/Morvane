@@ -5,6 +5,13 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "Terms of Service | Morvane",
   description: "Terms for reading and using Morvane.",
+  alternates: {
+    canonical: "/terms",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {

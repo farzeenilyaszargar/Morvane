@@ -3,32 +3,34 @@ import Image from "next/image";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { articles, featuredArticles } from "@/lib/articles";
-
-const siteUrl = "https://morvane.space";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  name: "Morvane",
-  description:
-    "Morvane is a technology news publication covering startups, venture, AI, security, apps, chips, and infrastructure.",
-  url: siteUrl,
+  "@type": ["CollectionPage", "Blog"],
+  "@id": `${siteConfig.url}/#home`,
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  inLanguage: siteConfig.language,
+  isPartOf: {
+    "@id": `${siteConfig.url}/#website`,
+  },
   publisher: {
-    "@type": "Organization",
-    name: "Morvane",
+    "@id": `${siteConfig.url}/#organization`,
   },
   blogPost: articles.map((article) => ({
-    "@type": "BlogPosting",
+    "@type": "NewsArticle",
+    "@id": `${absoluteUrl(`/articles/${article.slug}`)}#article`,
     headline: article.title,
     description: article.excerpt,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     articleSection: article.category,
-    image: `${siteUrl}${article.image.src}`,
-    url: `${siteUrl}/articles/${article.slug}`,
+    image: absoluteUrl(article.image.src),
+    url: absoluteUrl(`/articles/${article.slug}`),
     author: {
-      "@type": "Organization",
-      name: "Morvane Editorial",
+      "@id": `${siteConfig.url}/#organization`,
     },
   })),
 };

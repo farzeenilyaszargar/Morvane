@@ -5,6 +5,13 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "Privacy Policy | Morvane",
   description: "How Morvane Media LLC handles reader privacy and site data.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {
