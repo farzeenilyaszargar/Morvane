@@ -33,6 +33,16 @@ const jsonLd = {
   })),
 };
 
+const featuredVideo = {
+  title: "The growing environmental impact of AI data centers",
+  kicker: "Video",
+  source: "PBS NewsHour",
+  href: "https://www.youtube.com/watch?v=-sNKfRq1oKg",
+  embedUrl: "https://www.youtube.com/embed/-sNKfRq1oKg?rel=0",
+  description:
+    "A sharp look at how AI infrastructure is changing power demand, grid planning, and the environmental debate around the next wave of data centers.",
+};
+
 function MetaLine({
   category,
   date,
@@ -302,6 +312,41 @@ export default function Home() {
           {[articles[7], articles[8], articles[11]].map((article) => (
             <SmallCard key={article.slug} article={article} />
           ))}
+        </div>
+      </section>
+
+      <section className="bg-[#10130f] px-5 py-16 text-white sm:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
+              {featuredVideo.kicker}
+            </p>
+            <h2 className="mt-4 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-6xl">
+              {featuredVideo.title}
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-white/70">
+              {featuredVideo.description}
+            </p>
+            <a
+              href={featuredVideo.href}
+              target="_blank"
+              rel="noopener"
+              className="mt-6 inline-block text-sm font-black uppercase tracking-[0.08em] text-[#00A2FF] transition hover:text-white"
+            >
+              Watch on YouTube
+            </a>
+          </div>
+
+          <div className="overflow-hidden bg-black">
+            <iframe
+              className="aspect-video w-full"
+              src={featuredVideo.embedUrl}
+              title={`${featuredVideo.title} - ${featuredVideo.source}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
 
