@@ -214,7 +214,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-01",
     readTime: "7 min",
     accent: "bg-[#00A2FF]",
-    image: images.code,
+    image: images.enterprise,
     keywords: ["GitHub Copilot", "AI pricing", "developer tools", "software subscriptions"],
     standfirst:
       "AI features changed the cost structure of software. Now subscription pricing is catching up.",
@@ -517,7 +517,7 @@ export const articles: Article[] = [
     publishedAt: "2026-06-01",
     readTime: "6 min",
     accent: "bg-[#00A2FF]",
-    image: images.founders,
+    image: images.venture,
     keywords: ["angel funds", "startup operators", "venture capital", "Snap alumni"],
     seo: {
       title: "Operator-led angel funds are reshaping startup capital",

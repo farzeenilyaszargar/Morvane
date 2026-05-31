@@ -130,7 +130,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       "@type": "ImageObject",
       url: absoluteUrl(article.image.src),
       caption: article.image.alt,
-      creditText: article.image.credit,
     },
     thumbnailUrl: absoluteUrl(article.image.src),
     mentions: mentionedLinks.map((link) => ({
@@ -212,14 +211,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     className="cover-image object-cover"
                   />
                 </div>
-                <a
-                  href={article.image.creditUrl}
-                  className="mt-3 block text-[0.65rem] font-bold uppercase tracking-[0.1em] text-[#697064] transition hover:text-[#0077C8]"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Image: {article.image.credit}
-                </a>
               </div>
             </div>
           </header>
@@ -251,26 +242,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   {article.pullQuote}
                 </p>
               </div>
-              {article.sourceLinks ? (
-                <div className="border border-[#10130f]/20 bg-white p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0077C8]">
-                    Source Trail
-                  </p>
-                  <div className="mt-4 space-y-3">
-                    {article.sourceLinks.map((source) => (
-                      <a
-                        key={source.url}
-                        href={source.url}
-                        target="_blank"
-                        rel="noopener"
-                        className="block border-t border-[#10130f]/20 pt-3 text-sm font-bold leading-6 text-[#33382f] transition first:border-t-0 first:pt-0 hover:text-[#0077C8]"
-                      >
-                        {source.label}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
               {mentionedLinks.length > 0 ? (
                 <div className="border border-[#10130f]/20 bg-white p-5">
                   <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0077C8]">
