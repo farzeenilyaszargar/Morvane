@@ -220,7 +220,7 @@ export default function Home() {
 
       <section id="latest" className="bg-[#0077C8] text-white">
         <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:py-10">
-          <div className="mb-8 flex justify-center">
+          <div className="mb-12 flex justify-center">
             <Image
               src="/logo.svg"
               alt="Morvane"
