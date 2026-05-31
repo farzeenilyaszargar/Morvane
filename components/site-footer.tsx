@@ -20,7 +20,7 @@ const legalLinks = [
 export function SiteFooter() {
   return (
     <footer className="bg-[#10130f] text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-start lg:py-14">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-20 sm:px-8 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-start lg:pb-14">
         <div>
           <Link href="/" aria-label="Morvane home" className="inline-flex">
             <Image
