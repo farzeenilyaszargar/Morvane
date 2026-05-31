@@ -15,10 +15,10 @@ export default function TermsPage() {
         <p className="text-sm font-black uppercase tracking-[0.1em] text-[#0077C8]">
           Morvane Media LLC
         </p>
-        <h1 className="mt-4 text-5xl font-black leading-[0.92] tracking-[-0.05em] sm:text-6xl">
+        <h1 className="mt-4 text-4xl font-black leading-[0.94] tracking-[-0.045em] sm:text-6xl sm:leading-[0.92]">
           Terms of Service
         </h1>
-        <div className="mt-10 space-y-7 text-lg leading-8 text-[#33382f]">
+        <div className="mt-10 space-y-7 text-base leading-7 text-[#33382f] sm:text-lg sm:leading-8">
           <p>
             Morvane publishes technology news, analysis, and commentary for readers interested in
             startups, venture, AI, security, apps, hardware, and infrastructure.

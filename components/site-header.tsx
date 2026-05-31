@@ -110,9 +110,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-black/40 bg-[#212426] backdrop-blur-md">
       <nav
-        className={`relative mx-auto flex max-w-7xl items-center justify-between py-3 transition-[gap,padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          showHeaderLogo ? "gap-4 px-5 sm:px-8" : "gap-0 px-0"
-        }`}
+        className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-3 transition-[gap,padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:flex-nowrap sm:px-8"
       >
         <Link
           href="/"
@@ -140,7 +138,7 @@ export function SiteHeader() {
         <div
           className={`flex min-w-0 items-center overflow-x-auto whitespace-nowrap text-sm font-black text-white transition-[gap,left,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             showHeaderLogo
-              ? "absolute left-1/2 max-w-[calc(100%-15rem)] -translate-x-1/2 justify-center gap-5 px-0"
+              ? "order-3 w-full translate-x-0 justify-start gap-5 px-0 pt-1 sm:absolute sm:left-1/2 sm:order-none sm:w-auto sm:max-w-[calc(100%-15rem)] sm:-translate-x-1/2 sm:justify-center sm:pt-0"
               : "static flex-1 translate-x-0 justify-start gap-6 px-0"
           }`}
         >

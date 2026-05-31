@@ -38,7 +38,7 @@ export function SiteFooter() {
           <p className="mt-5 text-xs font-bold text-white/75">© 2026 Morvane Media LLC.</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid gap-8 sm:grid-cols-2">
           <nav aria-label="Footer topics">
             <h2 className="text-sm font-black uppercase tracking-[0.1em] text-white">Topics</h2>
             <div className="mt-4 grid gap-3 text-sm font-bold text-white/62">

@@ -14,12 +14,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -64,4 +66,21 @@ body {
 
 .border-3 {
   border-width: 3px;
+}
+
+@media (max-width: 640px) {
+  .article-prose section + section {
+    margin-top: 3rem;
+  }
+
+  .article-prose h2 {
+    font-size: 2.15rem;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+  }
+
+  .article-prose p {
+    font-size: 1.03rem;
+    line-height: 1.78;
+  }
 }

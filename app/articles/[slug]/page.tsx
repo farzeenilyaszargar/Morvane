@@ -122,10 +122,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   <span>{article.date}</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h1 className="max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.055em] text-[#10130f] sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-5xl text-4xl font-black leading-[0.94] tracking-[-0.045em] text-[#10130f] sm:text-6xl sm:leading-[0.9] lg:text-7xl">
                   {article.title}
                 </h1>
-                <p className="mt-7 max-w-3xl text-xl leading-8 text-[#4a5046]">{article.dek}</p>
+                <p className="mt-7 max-w-3xl text-lg leading-8 text-[#4a5046] sm:text-xl">
+                  {article.dek}
+                </p>
               </div>
               <div className="self-center">
                 <div className="relative mx-auto min-h-72 w-full max-w-[360px] overflow-hidden border border-[#10130f]/20 bg-[#e8ebe2]">
@@ -152,7 +154,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[minmax(0,760px)_320px]">
             <div>
-              <p className="border-l-4 border-[#00A2FF] bg-white p-6 text-2xl font-black leading-9 text-[#10130f]">
+              <p className="border-l-4 border-[#00A2FF] bg-white p-5 text-xl font-black leading-8 text-[#10130f] sm:p-6 sm:text-2xl sm:leading-9">
                 {article.standfirst}
               </p>
 

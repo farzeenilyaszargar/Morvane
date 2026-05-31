@@ -64,7 +64,7 @@ function MetaLine({
 function SectionTitle({ title, href }: { title: string; href?: string }) {
   return (
     <div className="mb-9 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end sm:gap-6">
-      <h2 className="text-4xl font-black leading-[0.92] tracking-[-0.04em] text-[#0077C8] sm:text-5xl">
+      <h2 className="max-w-full text-3xl font-black leading-[0.95] tracking-[-0.035em] text-[#0077C8] sm:text-5xl sm:leading-[0.92]">
         {title}
       </h2>
       {href ? (
@@ -96,10 +96,10 @@ function LeadCard({ article }: { article: (typeof articles)[number] }) {
         />
       </div>
       <div className="mt-6">
-        <h1 className="max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.055em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl lg:text-7xl">
+        <h1 className="max-w-5xl text-4xl font-black leading-[0.94] tracking-[-0.045em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl sm:leading-[0.9] lg:text-7xl">
           {article.title}
         </h1>
-        <p className="mt-5 max-w-3xl text-xl leading-8 text-white/82">{article.dek}</p>
+        <p className="mt-5 max-w-3xl text-lg leading-8 text-white/82 sm:text-xl">{article.dek}</p>
       </div>
     </Link>
   );
@@ -111,7 +111,7 @@ function HeroHeadlineLink({ article }: { article: (typeof articles)[number] }) {
       href={`/articles/${article.slug}`}
       className="group grid grid-cols-[84px_1fr] items-center gap-4 py-4"
     >
-      <div className="relative h-16 overflow-hidden bg-[#006bb4]">
+      <div className="relative h-16 min-w-0 overflow-hidden bg-[#006bb4]">
         <Image
           src={article.image.src}
           alt={article.image.alt}
@@ -121,7 +121,7 @@ function HeroHeadlineLink({ article }: { article: (typeof articles)[number] }) {
         />
       </div>
       <div>
-        <h3 className="text-xl font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff]">
+        <h3 className="text-lg font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff] sm:text-xl">
           {article.title}
         </h3>
       </div>
@@ -146,10 +146,12 @@ function LatestRow({ article }: { article: (typeof articles)[number] }) {
       </div>
       <div>
         <MetaLine category={article.category} date={article.date} readTime={article.readTime} />
-        <h3 className="mt-3 text-3xl font-black leading-[0.98] tracking-[-0.04em] text-[#10130f] transition group-hover:text-[#0077C8] sm:text-4xl">
+        <h3 className="mt-3 text-2xl font-black leading-[1] tracking-[-0.035em] text-[#10130f] transition group-hover:text-[#0077C8] sm:text-4xl sm:leading-[0.98]">
           {article.title}
         </h3>
-        <p className="mt-4 max-w-2xl text-lg leading-8 text-[#4a5046]">{article.excerpt}</p>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-[#4a5046] sm:text-lg sm:leading-8">
+          {article.excerpt}
+        </p>
       </div>
     </Link>
   );
@@ -168,7 +170,7 @@ function SmallCard({ article }: { article: (typeof articles)[number] }) {
         />
       </div>
       <MetaLine category={article.category} date={article.date} />
-      <h3 className="mt-3 text-3xl font-black leading-[0.98] tracking-[-0.04em] text-[#10130f] transition group-hover:text-[#0077C8]">
+      <h3 className="mt-3 text-2xl font-black leading-[1] tracking-[-0.035em] text-[#10130f] transition group-hover:text-[#0077C8] sm:text-3xl sm:leading-[0.98]">
         {article.title}
       </h3>
     </Link>
@@ -263,7 +265,7 @@ export default function Home() {
             <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
               Newsletters
             </p>
-            <h2 className="mt-3 text-4xl font-black leading-[0.95] tracking-[-0.04em]">
+            <h2 className="mt-3 text-3xl font-black leading-[0.98] tracking-[-0.035em] sm:text-4xl sm:leading-[0.95]">
               Daily signal, no filler
             </h2>
             <p className="mt-3 leading-7 text-white/70">
@@ -320,7 +322,7 @@ export default function Home() {
       <section className="mb-10 border-y border-[#10130f]/10 bg-white px-5 py-20 text-[#10130f] sm:px-8 lg:mb-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex items-end justify-between">
-            <h2 className="text-4xl font-black leading-[0.92] tracking-[-0.04em] text-[#0077C8] sm:text-5xl">
+            <h2 className="text-3xl font-black leading-[0.95] tracking-[-0.035em] text-[#0077C8] sm:text-5xl sm:leading-[0.92]">
               Watch
             </h2>
           </div>
@@ -330,7 +332,7 @@ export default function Home() {
               <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
                 {featuredVideo.kicker}
               </p>
-              <h3 className="mt-4 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-6xl">
+              <h3 className="mt-4 text-3xl font-black leading-[0.96] tracking-[-0.04em] sm:text-6xl sm:leading-[0.9]">
                 {featuredVideo.title}
               </h3>
               <p className="mt-5 max-w-xl text-lg leading-8 text-[#4a5046]">
