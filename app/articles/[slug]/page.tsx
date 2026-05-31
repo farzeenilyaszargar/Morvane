@@ -117,12 +117,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <header className="border-b border-[#10130f] bg-[#f7f7f2]">
             <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_360px] lg:py-14">
               <div>
-                <Link
-                  href="/"
-                  className="mb-7 inline-block border border-[#10130f] px-3 py-2 text-xs font-black uppercase tracking-[0.1em] text-[#10130f] transition hover:bg-[#10130f] hover:text-white"
-                >
-                  Back to feed
-                </Link>
                 <div className="mb-6 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.1em] text-[#697064]">
                   <span className="text-[#0077C8]">{article.category}</span>
                   <span>{article.date}</span>
