@@ -109,7 +109,7 @@ function HeroHeadlineLink({ article }: { article: (typeof articles)[number] }) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group grid grid-cols-[84px_1fr] items-center gap-4 border-t border-white/25 py-4 first:border-t-0 first:pt-0"
+      className="group grid grid-cols-[84px_1fr] items-center gap-4 py-4"
     >
       <div className="relative h-16 overflow-hidden bg-[#006bb4]">
         <Image
@@ -231,7 +231,7 @@ export default function Home() {
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_360px]">
             <LeadCard article={lead} />
-            <aside className="lg:border-l lg:border-white/35 lg:pl-6">
+            <aside className="lg:pl-6">
               <h2 className="mb-2 text-sm font-black uppercase tracking-[0.1em] text-white">
                 Top Headlines
               </h2>
