@@ -226,10 +226,10 @@ export default function Home() {
             <Image
               src="/logo.svg"
               alt="Morvane"
-              width={520}
-              height={134}
+              width={420}
+              height={108}
               priority
-              className="h-auto w-full max-w-[430px]"
+              className="h-auto w-full max-w-[340px]"
             />
           </div>
 
