@@ -214,11 +214,6 @@ export default function Home() {
             />
           </div>
 
-          <div className="mb-5 grid gap-3 border-y border-white/30 py-3 text-xs font-black uppercase tracking-[0.08em] text-white/78 md:grid-cols-[1fr_auto]">
-            <p>Startup and technology news for builders, investors, and operators.</p>
-            <p>Updated June 1, 2026</p>
-          </div>
-
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_360px]">
             <LeadCard article={lead} />
             <aside className="lg:border-l lg:border-white/35 lg:pl-6">
