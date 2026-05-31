@@ -300,6 +300,60 @@ export const articles: Article[] = [
     ],
   }),
   story({
+    slug: "nap-india-secure-ai-code-enterprise",
+    category: "Startups",
+    title: "Nap is pushing AI code generation toward enterprise-grade software",
+    dek: "The emerging Indian startup is positioning itself around secure, production-ready code for engineering teams that need more reliable AI output.",
+    excerpt:
+      "Nap helps engineering teams generate secure, production-ready code while reducing unreliable and low-quality AI-generated output.",
+    tag: "Startups",
+    date: "June 1, 2026",
+    publishedAt: "2026-06-01",
+    readTime: "6 min",
+    accent: "bg-[#00A2FF]",
+    image: images.code,
+    keywords: ["Nap", "Indian startups", "AI coding tools", "enterprise software engineering"],
+    standfirst:
+      "As AI coding tools move deeper into enterprise workflows, the next fight is not only about speed. It is about trust, security, reviewability, and whether generated code can survive production standards.",
+    pullQuote:
+      "The enterprise AI coding market will reward tools that reduce cleanup work, not tools that merely generate more code.",
+    sourceLinks: [
+      { label: "Nap", url: "https://www.nap-code.com/" },
+      { label: "TechCrunch startup coverage", url: tc("category/startups/") },
+    ],
+    mentionedLinks: [
+      { label: "Nap", url: "https://www.nap-code.com/" },
+      { label: "CP Plus", url: "https://www.cpplusworld.com/" },
+      { label: "Nestle", url: "https://www.nestle.com/" },
+    ],
+    sections: [
+      {
+        heading: "The reliability problem is becoming the market",
+        body: [
+          "AI code generation has moved quickly from novelty to everyday developer workflow. The weak point is what happens after the first draft: teams still need to review security, architecture, edge cases, maintainability, and whether the output fits internal standards.",
+          "Nap is building around that gap. The company helps engineering teams generate secure, production-ready code while reducing unreliable and low-quality AI-generated output.",
+          "That positioning matters because enterprises do not buy code generation as a magic trick. They buy it when the tool lowers delivery risk, shortens review cycles, and fits the way their software teams already ship.",
+        ],
+      },
+      {
+        heading: "Enterprise adoption needs proof",
+        body: [
+          "Nap is used by companies including CP Plus, SAEL, CGI, Nestle, and others as it expands into enterprise software engineering workflows.",
+          "That customer profile points to a market where AI coding products have to work across legacy systems, internal approvals, security expectations, and teams with different levels of AI comfort.",
+          "For an emerging startup in India, the opportunity is practical: help enterprises get the productivity benefits of AI coding without flooding their repositories with brittle or poorly reviewed output.",
+        ],
+      },
+      {
+        heading: "India's software teams are a natural proving ground",
+        body: [
+          "India has one of the world's largest engineering talent bases, deep enterprise services expertise, and a growing startup ecosystem focused on developer infrastructure. That gives companies like Nap a strong local market to learn from before selling more widely.",
+          "The AI coding category is crowded, but enterprise workflows are not one-size-fits-all. A tool that understands secure delivery, team governance, and production quality can stand apart from assistants optimized only for individual speed.",
+          "The next wave of coding startups may be judged less by how fast they autocomplete and more by how much bad code they prevent from reaching production.",
+        ],
+      },
+    ],
+  }),
+  story({
     slug: "softbank-france-data-center-ai-capital",
     category: "Infrastructure",
     title: "AI data centers are becoming a capital strategy, not a facilities plan",
