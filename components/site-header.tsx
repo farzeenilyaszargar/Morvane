@@ -22,6 +22,7 @@ export function SiteHeader() {
   const inputRef = useRef<HTMLInputElement>(null);
   const isHomePage = pathname === "/";
   const showHeaderLogo = !isHomePage || hasScrolled;
+  const isTopHome = isHomePage && !hasScrolled;
 
   const searchResults = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -109,27 +110,35 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-black/40 bg-[#212426] backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        {showHeaderLogo ? (
-          <Link
-            href="/"
-            className="flex h-10 w-40 shrink-0 items-center overflow-hidden opacity-100 transition-all duration-500 ease-out"
-            aria-label="Morvane home"
-          >
-            <Image
-              src="/logo.svg"
-              alt="Morvane"
-              width={140}
-              height={36}
-              priority
-              className="h-5 w-32 translate-x-0 object-contain transition duration-500"
-            />
-          </Link>
-        ) : null}
+      <nav
+        className={`mx-auto flex max-w-7xl items-center justify-between gap-4 py-3 transition-[padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isTopHome ? "gap-0 px-0" : "gap-4 px-5 sm:px-8"
+        }`}
+      >
+        <Link
+          href="/"
+          className={`flex h-10 shrink-0 items-center overflow-hidden transition-[width,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            showHeaderLogo ? "w-40 translate-x-0 opacity-100" : "w-0 -translate-x-3 opacity-0"
+          }`}
+          aria-label="Morvane home"
+          aria-hidden={!showHeaderLogo}
+          tabIndex={showHeaderLogo ? undefined : -1}
+        >
+          <Image
+            src="/logo.svg"
+            alt="Morvane"
+            width={140}
+            height={36}
+            priority
+            className={`h-5 w-32 object-contain transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              showHeaderLogo ? "translate-x-0" : "-translate-x-8"
+            }`}
+          />
+        </Link>
 
         <div
-          className={`flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap text-sm font-black text-white transition-all duration-500 ${
-            showHeaderLogo ? "justify-center gap-5" : "justify-start gap-6"
+          className={`flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap text-sm font-black text-white transition-[gap,justify-content] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            showHeaderLogo ? "justify-center gap-5" : "justify-start gap-6 pl-0"
           }`}
         >
           {navItems.map((item) => (
