@@ -109,11 +109,22 @@ function HeroHeadlineLink({ article }: { article: (typeof articles)[number] }) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group block border-t border-white/25 py-4 first:border-t-0 first:pt-0"
+      className="group grid grid-cols-[84px_1fr] items-center gap-4 border-t border-white/25 py-4 first:border-t-0 first:pt-0"
     >
-      <h3 className="text-xl font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff]">
-        {article.title}
-      </h3>
+      <div className="relative h-16 overflow-hidden bg-[#006bb4]">
+        <Image
+          src={article.image.src}
+          alt={article.image.alt}
+          fill
+          sizes="84px"
+          className="cover-image object-cover transition duration-500 group-hover:scale-[1.04]"
+        />
+      </div>
+      <div>
+        <h3 className="text-xl font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff]">
+          {article.title}
+        </h3>
+      </div>
     </Link>
   );
 }

@@ -22,7 +22,6 @@ export function SiteHeader() {
   const inputRef = useRef<HTMLInputElement>(null);
   const isHomePage = pathname === "/";
   const showHeaderLogo = !isHomePage || hasScrolled;
-  const isTopHome = isHomePage && !hasScrolled;
 
   const searchResults = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -111,14 +110,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-black/40 bg-[#212426] backdrop-blur-md">
       <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between gap-4 py-3 transition-[padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isTopHome ? "gap-0 px-0" : "gap-4 px-5 sm:px-8"
+        className={`relative mx-auto flex max-w-7xl items-center justify-between py-3 transition-[gap,padding] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          showHeaderLogo ? "gap-4 px-5 sm:px-8" : "gap-0 px-0"
         }`}
       >
         <Link
           href="/"
           className={`flex h-10 shrink-0 items-center overflow-hidden transition-[width,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            showHeaderLogo ? "w-40 translate-x-0 opacity-100" : "w-0 -translate-x-3 opacity-0"
+            showHeaderLogo
+              ? "static w-40 translate-x-0 opacity-100"
+              : "absolute left-0 w-0 -translate-x-3 opacity-0"
           }`}
           aria-label="Morvane home"
           aria-hidden={!showHeaderLogo}
@@ -137,8 +138,10 @@ export function SiteHeader() {
         </Link>
 
         <div
-          className={`flex min-w-0 flex-1 items-center overflow-x-auto whitespace-nowrap text-sm font-black text-white transition-[gap,justify-content] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            showHeaderLogo ? "justify-center gap-5" : "justify-start gap-6 pl-0"
+          className={`flex min-w-0 items-center overflow-x-auto whitespace-nowrap text-sm font-black text-white transition-[gap,left,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            showHeaderLogo
+              ? "absolute left-1/2 max-w-[calc(100%-15rem)] -translate-x-1/2 justify-center gap-5 px-0"
+              : "static flex-1 translate-x-0 justify-start gap-6 px-0"
           }`}
         >
           {navItems.map((item) => (
