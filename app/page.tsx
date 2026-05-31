@@ -231,9 +231,9 @@ export default function Home() {
             />
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_360px]">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_360px] lg:gap-4">
             <LeadCard article={lead} />
-            <aside className="lg:pl-6">
+            <aside>
               <h2 className="mb-2 text-sm font-black uppercase tracking-[0.1em] text-white">
                 Top Headlines
               </h2>
