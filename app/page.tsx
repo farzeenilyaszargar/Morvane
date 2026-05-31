@@ -317,7 +317,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-[#10130f]/10 bg-[#f7f7f2] px-5 py-20 text-[#10130f] sm:px-8 lg:py-24">
+      <section className="mb-10 border-y border-[#10130f]/10 bg-white px-5 py-20 text-[#10130f] sm:px-8 lg:mb-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex items-end justify-between">
             <h2 className="text-4xl font-black leading-[0.92] tracking-[-0.04em] text-[#0077C8] sm:text-5xl">
@@ -346,7 +346,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="overflow-hidden bg-black shadow-[0_18px_50px_rgba(16,19,15,0.18)]">
+            <div className="overflow-hidden border border-[#10130f]/15 bg-black shadow-[0_18px_50px_rgba(16,19,15,0.12)]">
               <iframe
                 className="aspect-video w-full"
                 src={featuredVideo.embedUrl}
