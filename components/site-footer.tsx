@@ -16,7 +16,7 @@ export function SiteFooter() {
         <p className="lg:text-left">Morvane covers startups, AI, venture, security, and the money behind the next platform shift.</p>
         <Link
           href="/"
-          className="text-xl font-black tracking-[-0.01em] text-[#16c60c] transition hover:text-white"
+          className="text-xl font-black tracking-[-0.01em] text-[#00A2FF] transition hover:text-white"
         >
           Morvane
         </Link>
@@ -25,7 +25,7 @@ export function SiteFooter() {
           className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-black uppercase tracking-[0.08em] lg:justify-end"
         >
           {footerLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="transition hover:text-[#16c60c]">
+            <Link key={link.href} href={link.href} className="transition hover:text-[#00A2FF]">
               {link.label}
             </Link>
           ))}

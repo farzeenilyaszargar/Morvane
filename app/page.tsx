@@ -44,7 +44,7 @@ function MetaLine({
 }) {
   return (
     <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-[#697064]">
-      <span className="text-[#0b7d11]">{category}</span>
+      <span className="text-[#0077C8]">{category}</span>
       <span>{date}</span>
       {readTime ? <span>{readTime}</span> : null}
     </div>
@@ -58,7 +58,7 @@ function SectionTitle({ title, href }: { title: string; href?: string }) {
         {title}
       </h2>
       {href ? (
-        <Link href={href} className="text-sm font-black text-[#0b7d11] transition hover:text-black">
+        <Link href={href} className="text-sm font-black text-[#0077C8] transition hover:text-black">
           See more
         </Link>
       ) : null}
@@ -68,8 +68,22 @@ function SectionTitle({ title, href }: { title: string; href?: string }) {
 
 function LeadCard({ article }: { article: (typeof articles)[number] }) {
   return (
-    <Link href={`/articles/${article.slug}`} className="group block">
-      <div className="relative min-h-[290px] overflow-hidden border border-[#10130f]/20 bg-[#e8ebe2]">
+    <Link
+      href={`/articles/${article.slug}`}
+      className="group grid gap-7 lg:grid-cols-[minmax(0,1fr)_0.82fr] lg:items-end"
+    >
+      <div>
+        <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-white/75">
+          <span className="text-white">{article.category}</span>
+          <span>{article.date}</span>
+          <span>{article.readTime}</span>
+        </div>
+        <h1 className="mt-4 max-w-4xl text-5xl font-black leading-[0.88] tracking-[-0.055em] text-white transition group-hover:text-[#c5eaff] sm:text-6xl lg:text-7xl">
+          {article.title}
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-white/82">{article.dek}</p>
+      </div>
+      <div className="relative min-h-[300px] overflow-hidden border border-white/25 bg-[#006bb4]">
         <Image
           src={article.image.src}
           alt={article.image.alt}
@@ -79,25 +93,21 @@ function LeadCard({ article }: { article: (typeof articles)[number] }) {
           className="cover-image object-cover transition duration-500 group-hover:scale-[1.02]"
         />
       </div>
-      <div className="border-b border-[#10130f] py-5">
-        <MetaLine category={article.category} date={article.date} readTime={article.readTime} />
-        <h1 className="mt-3 max-w-4xl text-5xl font-black leading-[0.9] tracking-[-0.05em] text-[#10130f] transition group-hover:text-[#0b7d11] sm:text-6xl">
-          {article.title}
-        </h1>
-        <p className="mt-4 max-w-3xl text-lg leading-8 text-[#4a5046]">{article.dek}</p>
-      </div>
     </Link>
   );
 }
 
-function HeadlineLink({ article }: { article: (typeof articles)[number] }) {
+function HeroHeadlineLink({ article }: { article: (typeof articles)[number] }) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group block border-t border-[#10130f]/20 py-4 first:border-t-0 first:pt-0"
+      className="group block border-t border-white/25 py-4 first:border-t-0 first:pt-0"
     >
-      <MetaLine category={article.category} date={article.date} />
-      <h3 className="mt-2 text-xl font-black leading-tight tracking-[-0.02em] text-[#10130f] transition group-hover:text-[#0b7d11]">
+      <div className="flex flex-wrap gap-2 text-xs font-black uppercase tracking-[0.08em] text-white/65">
+        <span className="text-white">{article.category}</span>
+        <span>{article.date}</span>
+      </div>
+      <h3 className="mt-2 text-xl font-black leading-tight tracking-[-0.02em] text-white transition group-hover:text-[#c5eaff]">
         {article.title}
       </h3>
     </Link>
@@ -121,7 +131,7 @@ function LatestRow({ article }: { article: (typeof articles)[number] }) {
       </div>
       <div>
         <MetaLine category={article.category} date={article.date} readTime={article.readTime} />
-        <h3 className="mt-2 text-3xl font-black leading-tight tracking-[-0.035em] text-[#10130f] transition group-hover:text-[#0b7d11]">
+        <h3 className="mt-2 text-3xl font-black leading-tight tracking-[-0.035em] text-[#10130f] transition group-hover:text-[#0077C8]">
           {article.title}
         </h3>
         <p className="mt-3 max-w-2xl leading-7 text-[#4a5046]">{article.excerpt}</p>
@@ -143,7 +153,7 @@ function SmallCard({ article }: { article: (typeof articles)[number] }) {
         />
       </div>
       <MetaLine category={article.category} date={article.date} />
-      <h3 className="mt-2 text-2xl font-black leading-tight tracking-[-0.03em] text-[#10130f] transition group-hover:text-[#0b7d11]">
+      <h3 className="mt-2 text-2xl font-black leading-tight tracking-[-0.03em] text-[#10130f] transition group-hover:text-[#0077C8]">
         {article.title}
       </h3>
     </Link>
@@ -159,10 +169,10 @@ function PopularList({ articles: list }: { articles: (typeof articles)[number][]
             href={`/articles/${article.slug}`}
             className="group grid grid-cols-[40px_1fr] gap-3 py-4"
           >
-            <span className="font-mono text-2xl font-black text-[#16c60c]">
+            <span className="font-mono text-2xl font-black text-[#00A2FF]">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="text-lg font-black leading-tight tracking-[-0.02em] text-[#10130f] transition group-hover:text-[#0b7d11]">
+            <span className="text-lg font-black leading-tight tracking-[-0.02em] text-[#10130f] transition group-hover:text-[#0077C8]">
               {article.title}
             </span>
           </Link>
@@ -191,24 +201,37 @@ export default function Home() {
       />
       <SiteHeader />
 
-      <section id="latest" className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
-        <div className="mb-5 grid gap-3 border-y border-[#10130f] py-3 text-xs font-black uppercase tracking-[0.08em] text-[#4a5046] md:grid-cols-[1fr_auto]">
-          <p>Startup and technology news for builders, investors, and operators.</p>
-          <p>Updated June 1, 2026</p>
-        </div>
+      <section id="latest" className="bg-[#0077C8] text-white">
+        <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:py-10">
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/logo.svg"
+              alt="Morvane"
+              width={520}
+              height={134}
+              priority
+              className="h-auto w-full max-w-[430px]"
+            />
+          </div>
 
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_360px]">
-          <LeadCard article={lead} />
-          <aside className="lg:border-l lg:border-[#10130f] lg:pl-6">
-            <h2 className="mb-2 text-sm font-black uppercase tracking-[0.1em] text-[#0b7d11]">
-              Top Headlines
-            </h2>
-            <div>
-              {topStories.concat(articles.slice(3, 6)).map((article) => (
-                <HeadlineLink key={article.slug} article={article} />
-              ))}
-            </div>
-          </aside>
+          <div className="mb-5 grid gap-3 border-y border-white/30 py-3 text-xs font-black uppercase tracking-[0.08em] text-white/78 md:grid-cols-[1fr_auto]">
+            <p>Startup and technology news for builders, investors, and operators.</p>
+            <p>Updated June 1, 2026</p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_360px]">
+            <LeadCard article={lead} />
+            <aside className="lg:border-l lg:border-white/35 lg:pl-6">
+              <h2 className="mb-2 text-sm font-black uppercase tracking-[0.1em] text-white">
+                Top Headlines
+              </h2>
+              <div>
+                {topStories.concat(articles.slice(3, 6)).map((article) => (
+                  <HeroHeadlineLink key={article.slug} article={article} />
+                ))}
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -227,7 +250,7 @@ export default function Home() {
           </div>
 
           <div id="newsletter" className="border border-[#10130f] bg-[#10130f] p-5 text-white">
-            <p className="text-sm font-black uppercase tracking-[0.1em] text-[#16c60c]">
+            <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
               Newsletters
             </p>
             <h2 className="mt-2 text-3xl font-black leading-tight tracking-[-0.03em]">
@@ -244,11 +267,11 @@ export default function Home() {
                 id="email"
                 type="email"
                 placeholder="you@example.com"
-                className="border border-white/30 bg-white px-4 py-3 text-[#10130f] outline-none placeholder:text-[#697064] focus:border-[#16c60c]"
+                className="border border-white/30 bg-white px-4 py-3 text-[#10130f] outline-none placeholder:text-[#697064] focus:border-[#00A2FF]"
               />
               <button
                 type="button"
-                className="bg-[#16c60c] px-4 py-3 font-black text-[#071006] transition hover:bg-white"
+                className="bg-[#00A2FF] px-4 py-3 font-black text-[#031827] transition hover:bg-white"
               >
                 Subscribe
               </button>

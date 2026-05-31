@@ -124,7 +124,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   Back to feed
                 </Link>
                 <div className="mb-6 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.1em] text-[#697064]">
-                  <span className="text-[#0b7d11]">{article.category}</span>
+                  <span className="text-[#0077C8]">{article.category}</span>
                   <span>{article.date}</span>
                   <span>{article.readTime}</span>
                 </div>
@@ -146,7 +146,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </div>
                 <a
                   href={article.image.creditUrl}
-                  className="mt-3 block text-[0.65rem] font-bold uppercase tracking-[0.1em] text-[#697064] transition hover:text-[#0b7d11]"
+                  className="mt-3 block text-[0.65rem] font-bold uppercase tracking-[0.1em] text-[#697064] transition hover:text-[#0077C8]"
                   target="_blank"
                   rel="noopener"
                 >
@@ -158,7 +158,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[minmax(0,760px)_320px]">
             <div>
-              <p className="border-l-4 border-[#16c60c] bg-white p-6 text-2xl font-black leading-9 text-[#10130f]">
+              <p className="border-l-4 border-[#00A2FF] bg-white p-6 text-2xl font-black leading-9 text-[#10130f]">
                 {article.standfirst}
               </p>
 
@@ -176,7 +176,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
             <aside className="space-y-5">
               <div className="border border-[#10130f] bg-white p-5">
-                <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
+                <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0077C8]">
                   Pull Quote
                 </p>
                 <p className="mt-4 text-2xl font-black leading-tight text-[#10130f]">
@@ -185,7 +185,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </div>
               {article.sourceLinks ? (
                 <div className="border border-[#10130f]/20 bg-white p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
+                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0077C8]">
                     Source Trail
                   </p>
                   <div className="mt-4 space-y-3">
@@ -195,7 +195,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         href={source.url}
                         target="_blank"
                         rel="noopener"
-                        className="block border-t border-[#10130f]/20 pt-3 text-sm font-bold leading-6 text-[#33382f] transition first:border-t-0 first:pt-0 hover:text-[#0b7d11]"
+                        className="block border-t border-[#10130f]/20 pt-3 text-sm font-bold leading-6 text-[#33382f] transition first:border-t-0 first:pt-0 hover:text-[#0077C8]"
                       >
                         {source.label}
                       </a>
@@ -205,7 +205,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               ) : null}
               {mentionedLinks.length > 0 ? (
                 <div className="border border-[#10130f]/20 bg-white p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
+                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0077C8]">
                     Outbound Links
                   </p>
                   <div className="mt-4 grid gap-2">
@@ -215,7 +215,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         href={link.url}
                         target="_blank"
                         rel="noopener"
-                        className="border border-[#10130f]/20 px-3 py-2 text-sm font-bold text-[#33382f] transition hover:border-[#10130f] hover:bg-[#f7f7f2] hover:text-[#0b7d11]"
+                        className="border border-[#10130f]/20 px-3 py-2 text-sm font-bold text-[#33382f] transition hover:border-[#10130f] hover:bg-[#f7f7f2] hover:text-[#0077C8]"
                       >
                         {link.label}
                       </a>
@@ -224,7 +224,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </div>
               ) : null}
               <div className="border border-[#10130f]/20 bg-white p-5">
-                <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
+                <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0077C8]">
                   Related
                 </p>
                 <div className="mt-4 space-y-4">
@@ -232,7 +232,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     <Link
                       key={related.slug}
                       href={`/articles/${related.slug}`}
-                      className="block border-t border-[#10130f]/20 pt-4 transition hover:text-[#0b7d11]"
+                      className="block border-t border-[#10130f]/20 pt-4 transition hover:text-[#0077C8]"
                     >
                       <p className="text-xs font-black uppercase tracking-[0.1em] text-[#697064]">
                         {related.category}

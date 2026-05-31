@@ -148,7 +148,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "8 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.product,
     keywords: ["AI companions", "AI safety", "product design", "chatbots"],
     standfirst:
@@ -202,7 +202,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "7 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.code,
     keywords: ["GitHub Copilot", "AI pricing", "developer tools", "software subscriptions"],
     standfirst:
@@ -256,7 +256,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "6 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.hardware,
     keywords: ["Meta AI", "wearables", "consumer hardware", "AI devices"],
     standfirst:
@@ -310,7 +310,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "7 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.power,
     keywords: ["AI data centers", "SoftBank", "compute", "energy"],
     standfirst:
@@ -364,7 +364,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "8 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.team,
     keywords: ["Black founders", "venture capital", "startup funding", "diversity"],
     standfirst:
@@ -418,7 +418,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "6 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.founders,
     keywords: ["angel funds", "startup operators", "venture capital", "Snap alumni"],
     standfirst:
@@ -472,7 +472,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "7 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.browser,
     keywords: ["browsers", "AI search", "DuckDuckGo", "privacy"],
     standfirst:
@@ -526,7 +526,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "7 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.security,
     keywords: ["AI security", "cybersecurity", "SOC automation", "Exaforce"],
     standfirst:
@@ -580,7 +580,7 @@ export const articles: Article[] = [
     date: "June 1, 2026",
     publishedAt: "2026-06-01",
     readTime: "6 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.chips,
     keywords: ["AI chips", "inference", "semiconductors", "NVIDIA"],
     standfirst:
@@ -634,7 +634,7 @@ export const articles: Article[] = [
     date: "May 31, 2026",
     publishedAt: "2026-05-31",
     readTime: "8 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.defense,
     keywords: ["Anduril", "defense tech", "startup funding", "autonomous systems"],
     standfirst:
@@ -688,7 +688,7 @@ export const articles: Article[] = [
     date: "May 31, 2026",
     publishedAt: "2026-05-31",
     readTime: "7 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.founders,
     keywords: ["AI data", "Wirestock", "training data", "venture capital"],
     standfirst:
@@ -742,7 +742,7 @@ export const articles: Article[] = [
     date: "May 31, 2026",
     publishedAt: "2026-05-31",
     readTime: "6 min",
-    accent: "bg-[#16c60c]",
+    accent: "bg-[#00A2FF]",
     image: images.robots,
     keywords: ["warehouse robots", "robotics", "automation", "supply chain"],
     standfirst:
