@@ -53,12 +53,15 @@ function MetaLine({
 
 function SectionTitle({ title, href }: { title: string; href?: string }) {
   return (
-    <div className="mb-5 flex items-end justify-between border-t border-[#10130f] pt-4">
-      <h2 className="text-3xl font-black leading-none tracking-[-0.03em] text-[#10130f]">
+    <div className="mb-9 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end sm:gap-6">
+      <h2 className="text-4xl font-black leading-[0.92] tracking-[-0.04em] text-[#0077C8] sm:text-5xl">
         {title}
       </h2>
       {href ? (
-        <Link href={href} className="text-sm font-black text-[#0077C8] transition hover:text-black">
+        <Link
+          href={href}
+          className="mb-1 shrink-0 text-sm font-black uppercase tracking-[0.08em] text-[#0077C8] transition hover:text-black"
+        >
           See more
         </Link>
       ) : null}
@@ -118,23 +121,23 @@ function LatestRow({ article }: { article: (typeof articles)[number] }) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group grid gap-5 border-t border-[#10130f]/20 py-6 first:border-t-0 first:pt-0 sm:grid-cols-[170px_1fr]"
+      className="group grid gap-6 py-9 sm:grid-cols-[190px_1fr]"
     >
-      <div className="relative h-32 overflow-hidden bg-[#e8ebe2] sm:h-full">
+      <div className="relative h-36 overflow-hidden bg-[#e8ebe2] sm:h-full">
         <Image
           src={article.image.src}
           alt={article.image.alt}
           fill
-          sizes="170px"
+          sizes="190px"
           className="cover-image object-cover"
         />
       </div>
       <div>
         <MetaLine category={article.category} date={article.date} readTime={article.readTime} />
-        <h3 className="mt-2 text-3xl font-black leading-tight tracking-[-0.035em] text-[#10130f] transition group-hover:text-[#0077C8]">
+        <h3 className="mt-3 text-3xl font-black leading-[0.98] tracking-[-0.04em] text-[#10130f] transition group-hover:text-[#0077C8] sm:text-4xl">
           {article.title}
         </h3>
-        <p className="mt-3 max-w-2xl leading-7 text-[#4a5046]">{article.excerpt}</p>
+        <p className="mt-4 max-w-2xl text-lg leading-8 text-[#4a5046]">{article.excerpt}</p>
       </div>
     </Link>
   );
@@ -142,8 +145,8 @@ function LatestRow({ article }: { article: (typeof articles)[number] }) {
 
 function SmallCard({ article }: { article: (typeof articles)[number] }) {
   return (
-    <Link href={`/articles/${article.slug}`} className="group block border-t border-[#10130f]/20 pt-4">
-      <div className="relative mb-4 h-36 overflow-hidden bg-[#e8ebe2]">
+    <Link href={`/articles/${article.slug}`} className="group block">
+      <div className="relative mb-5 h-40 overflow-hidden bg-[#e8ebe2]">
         <Image
           src={article.image.src}
           alt={article.image.alt}
@@ -153,7 +156,7 @@ function SmallCard({ article }: { article: (typeof articles)[number] }) {
         />
       </div>
       <MetaLine category={article.category} date={article.date} />
-      <h3 className="mt-2 text-2xl font-black leading-tight tracking-[-0.03em] text-[#10130f] transition group-hover:text-[#0077C8]">
+      <h3 className="mt-3 text-3xl font-black leading-[0.98] tracking-[-0.04em] text-[#10130f] transition group-hover:text-[#0077C8]">
         {article.title}
       </h3>
     </Link>
@@ -169,10 +172,10 @@ function PopularList({ articles: list }: { articles: (typeof articles)[number][]
             href={`/articles/${article.slug}`}
             className="group grid grid-cols-[40px_1fr] gap-3 py-4"
           >
-            <span className="font-mono text-2xl font-black text-[#00A2FF]">
+            <span className="font-mono text-3xl font-black leading-none text-[#00A2FF]">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="text-lg font-black leading-tight tracking-[-0.02em] text-[#10130f] transition group-hover:text-[#0077C8]">
+            <span className="text-xl font-black leading-tight tracking-[-0.025em] text-[#10130f] transition group-hover:text-[#0077C8]">
               {article.title}
             </span>
           </Link>
@@ -230,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:px-8 lg:grid-cols-[minmax(0,1fr)_330px]">
+      <section className="mx-auto grid max-w-7xl gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:py-20">
         <div>
           <SectionTitle title="Latest News" href="/#latest" />
           {latestArticles.map((article) => (
@@ -238,7 +241,7 @@ export default function Home() {
           ))}
         </div>
 
-        <aside className="space-y-10">
+        <aside className="space-y-14">
           <div>
             <SectionTitle title="Most Popular" />
             <PopularList articles={popularArticles} />
@@ -248,7 +251,7 @@ export default function Home() {
             <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
               Newsletters
             </p>
-            <h2 className="mt-2 text-3xl font-black leading-tight tracking-[-0.03em]">
+            <h2 className="mt-3 text-4xl font-black leading-[0.95] tracking-[-0.04em]">
               Daily signal, no filler
             </h2>
             <p className="mt-3 leading-7 text-white/70">
@@ -275,27 +278,27 @@ export default function Home() {
         </aside>
       </section>
 
-      <section id="venture" className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+      <section id="venture" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <SectionTitle title="Venture & Startups" href="/#venture" />
-        <div id="startups" className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div id="startups" className="grid gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           {ventureArticles.slice(0, 4).map((article) => (
             <SmallCard key={article.slug} article={article} />
           ))}
         </div>
       </section>
 
-      <section id="ai" className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+      <section id="ai" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <SectionTitle title="AI, Apps & Infrastructure" href="/#ai" />
-        <div id="apps" className="grid gap-6 lg:grid-cols-3">
+        <div id="apps" className="grid gap-x-8 gap-y-10 lg:grid-cols-3">
           {aiArticles.slice(0, 3).map((article) => (
             <SmallCard key={article.slug} article={article} />
           ))}
         </div>
       </section>
 
-      <section id="security" className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+      <section id="security" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <SectionTitle title="Security, Hardware & Systems" href="/#security" />
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-x-8 gap-y-10 lg:grid-cols-3">
           {[articles[7], articles[8], articles[11]].map((article) => (
             <SmallCard key={article.slug} article={article} />
           ))}

@@ -40,21 +40,22 @@ body {
 }
 
 .article-prose section + section {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .article-prose h2 {
-  color: #10130f;
-  font-size: clamp(1.9rem, 3vw, 3rem);
+  color: #0077C8;
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
   font-weight: 900;
-  line-height: 0.98;
-  margin-bottom: 1.25rem;
+  letter-spacing: -0.04em;
+  line-height: 0.94;
+  margin-bottom: 1.6rem;
 }
 
 .article-prose p {
-  font-size: 1.09rem;
-  line-height: 1.85;
-  margin-top: 1.05rem;
+  font-size: 1.14rem;
+  line-height: 1.9;
+  margin-top: 1.2rem;
 }
 
 .cover-image {
