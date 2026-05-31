@@ -15,25 +15,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://morvane.space"),
   title: {
-    default: "Morvane | Space-Age Technology Magazine",
+    default: "Morvane | Startup and Technology News",
     template: "%s | Morvane",
   },
   description:
-    "Morvane is a dark, space-inspired technology magazine covering AI, startups, cybersecurity, chips, product strategy, and search discovery.",
+    "Morvane is a technology news publication covering startups, venture, AI, cybersecurity, apps, chips, and infrastructure.",
   keywords: [
     "technology blog",
     "AI news",
     "startup news",
     "cybersecurity trends",
-    "search discovery",
-    "AI search",
+    "venture capital",
+    "apps",
     "AI chips",
   ],
   authors: [{ name: "Morvane Editorial" }],
   openGraph: {
-    title: "Morvane | Space-Age Technology Magazine",
+    title: "Morvane | Startup and Technology News",
     description:
-      "A clean, dark technology magazine for AI, startups, cybersecurity, chips, and product strategy.",
+      "Startup and technology news for builders, investors, and operators.",
     type: "website",
     url: "https://morvane.space",
     siteName: "Morvane",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morvane | Space-Age Technology Magazine",
+    title: "Morvane | Startup and Technology News",
     description:
-      "A clean, dark technology magazine for AI, startups, cybersecurity, chips, and product strategy.",
+      "Startup and technology news for builders, investors, and operators.",
     images: ["/articles/source-photos/enterprise-ai-service-businesses.jpg"],
   },
 };

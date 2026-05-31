@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #070910;
-  --foreground: #f1f4f8;
+  --background: #f7f7f2;
+  --foreground: #10130f;
 }
 
 @theme inline {
@@ -23,16 +23,16 @@ body {
 }
 
 ::selection {
-  background: #d7e5f7;
-  color: #070910;
+  background: #34d058;
+  color: #071006;
 }
 
 .space-field {
-  background: #070910;
+  background: #f7f7f2;
 }
 
 .star-noise {
-  background: #070910;
+  background: #f7f7f2;
 }
 
 .pixel-logo {
@@ -40,7 +40,7 @@ body {
 }
 
 .article-prose {
-  color: #d6dce6;
+  color: #242820;
 }
 
 .article-prose section + section {
@@ -48,21 +48,21 @@ body {
 }
 
 .article-prose h2 {
-  color: #ffffff;
-  font-size: clamp(2rem, 4vw, 3.75rem);
+  color: #10130f;
+  font-size: clamp(1.9rem, 3vw, 3rem);
   font-weight: 900;
   line-height: 0.98;
   margin-bottom: 1.25rem;
 }
 
 .article-prose p {
-  font-size: 1.08rem;
-  line-height: 1.9;
-  margin-top: 1rem;
+  font-size: 1.09rem;
+  line-height: 1.85;
+  margin-top: 1.05rem;
 }
 
 .cover-image {
-  filter: saturate(0.64) brightness(0.78) contrast(0.96);
+  filter: saturate(0.82) contrast(0.98);
 }
 
 .border-3 {

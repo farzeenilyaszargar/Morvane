@@ -105,36 +105,36 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   };
 
   return (
-    <main className="space-field min-h-screen text-slate-200">
+    <main className="min-h-screen bg-[#f7f7f2] text-[#10130f]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <div className="star-noise min-h-screen">
+      <div className="min-h-screen">
         <SiteHeader />
 
         <article>
-          <header className="border-b border-white/10 bg-[#0b101a]">
-            <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_340px] lg:py-14">
+          <header className="border-b border-[#10130f] bg-[#f7f7f2]">
+            <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_360px] lg:py-14">
               <div>
                 <Link
                   href="/"
-                  className="mb-7 inline-block border border-white/15 bg-black/30 px-3 py-2 font-mono text-xs font-black uppercase tracking-[0.14em] text-slate-200 backdrop-blur transition hover:border-slate-300 hover:bg-slate-200 hover:text-[#070910]"
+                  className="mb-7 inline-block border border-[#10130f] px-3 py-2 text-xs font-black uppercase tracking-[0.1em] text-[#10130f] transition hover:bg-[#10130f] hover:text-white"
                 >
                   Back to feed
                 </Link>
-                <div className="mb-6 flex flex-wrap gap-3 font-mono text-xs font-black uppercase tracking-[0.14em] text-slate-200">
-                  <span className="text-slate-200">{article.category}</span>
+                <div className="mb-6 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.1em] text-[#697064]">
+                  <span className="text-[#0b7d11]">{article.category}</span>
                   <span>{article.date}</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h1 className="max-w-5xl text-4xl font-black leading-[0.94] text-slate-50 sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.055em] text-[#10130f] sm:text-6xl lg:text-7xl">
                   {article.title}
                 </h1>
-                <p className="mt-7 max-w-3xl text-xl leading-8 text-slate-200">{article.dek}</p>
+                <p className="mt-7 max-w-3xl text-xl leading-8 text-[#4a5046]">{article.dek}</p>
               </div>
               <div>
-                <div className="relative min-h-72 overflow-hidden border border-white/15 bg-[#0b111d] ">
+                <div className="relative min-h-72 overflow-hidden border border-[#10130f]/20 bg-[#e8ebe2]">
                   <Image
                     src={article.image.src}
                     alt={article.image.alt}
@@ -146,7 +146,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </div>
                 <a
                   href={article.image.creditUrl}
-                  className="mt-3 block font-mono text-[0.65rem] font-bold uppercase tracking-[0.12em] text-slate-500 transition hover:text-slate-300"
+                  className="mt-3 block text-[0.65rem] font-bold uppercase tracking-[0.1em] text-[#697064] transition hover:text-[#0b7d11]"
                   target="_blank"
                   rel="noopener"
                 >
@@ -158,7 +158,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[minmax(0,760px)_320px]">
             <div>
-              <p className="border-l-4 border-slate-300 bg-white/[0.04] p-6 text-2xl font-black leading-9 text-white backdrop-blur">
+              <p className="border-l-4 border-[#16c60c] bg-white p-6 text-2xl font-black leading-9 text-[#10130f]">
                 {article.standfirst}
               </p>
 
@@ -175,17 +175,17 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             <aside className="space-y-5">
-              <div className="border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
-                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+              <div className="border border-[#10130f] bg-white p-5">
+                <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
                   Pull Quote
                 </p>
-                <p className="mt-4 text-2xl font-black leading-tight text-slate-50">
+                <p className="mt-4 text-2xl font-black leading-tight text-[#10130f]">
                   {article.pullQuote}
                 </p>
               </div>
               {article.sourceLinks ? (
-                <div className="border border-white/10 bg-[#0b111d] p-5">
-                  <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+                <div className="border border-[#10130f]/20 bg-white p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
                     Source Trail
                   </p>
                   <div className="mt-4 space-y-3">
@@ -195,7 +195,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         href={source.url}
                         target="_blank"
                         rel="noopener"
-                        className="block border-t border-white/10 pt-3 text-sm font-bold leading-6 text-slate-300 transition first:border-t-0 first:pt-0 hover:text-white"
+                        className="block border-t border-[#10130f]/20 pt-3 text-sm font-bold leading-6 text-[#33382f] transition first:border-t-0 first:pt-0 hover:text-[#0b7d11]"
                       >
                         {source.label}
                       </a>
@@ -204,8 +204,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </div>
               ) : null}
               {mentionedLinks.length > 0 ? (
-                <div className="border border-white/10 bg-[#0b111d] p-5">
-                  <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+                <div className="border border-[#10130f]/20 bg-white p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
                     Outbound Links
                   </p>
                   <div className="mt-4 grid gap-2">
@@ -215,7 +215,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         href={link.url}
                         target="_blank"
                         rel="noopener"
-                        className="border border-white/10 px-3 py-2 text-sm font-bold text-slate-300 transition hover:border-slate-300/30 hover:bg-white/[0.04] hover:text-white"
+                        className="border border-[#10130f]/20 px-3 py-2 text-sm font-bold text-[#33382f] transition hover:border-[#10130f] hover:bg-[#f7f7f2] hover:text-[#0b7d11]"
                       >
                         {link.label}
                       </a>
@@ -223,8 +223,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   </div>
                 </div>
               ) : null}
-              <div className="border border-white/10 bg-[#0b111d] p-5">
-                <p className="font-mono text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+              <div className="border border-[#10130f]/20 bg-white p-5">
+                <p className="text-xs font-black uppercase tracking-[0.1em] text-[#0b7d11]">
                   Related
                 </p>
                 <div className="mt-4 space-y-4">
@@ -232,12 +232,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     <Link
                       key={related.slug}
                       href={`/articles/${related.slug}`}
-                      className="block border-t border-white/10 pt-4 transition hover:text-slate-200"
+                      className="block border-t border-[#10130f]/20 pt-4 transition hover:text-[#0b7d11]"
                     >
-                      <p className="font-mono text-xs font-black uppercase tracking-[0.12em] text-slate-400">
+                      <p className="text-xs font-black uppercase tracking-[0.1em] text-[#697064]">
                         {related.category}
                       </p>
-                      <h3 className="mt-2 text-lg font-black leading-tight text-slate-50">
+                      <h3 className="mt-2 text-lg font-black leading-tight text-[#10130f]">
                         {related.title}
                       </h3>
                     </Link>

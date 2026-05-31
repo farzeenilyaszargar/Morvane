@@ -5,77 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/articles";
 
 function PixelLogo() {
-  const pixels = [
-    "core",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "core",
-    "core",
-    "core",
-    "",
-    "",
-    "",
-    "core",
-    "core",
-    "core",
-    "",
-    "core",
-    "",
-    "core",
-    "",
-    "core",
-    "core",
-    "",
-    "",
-    "core",
-    "",
-    "",
-    "core",
-    "core",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "core",
-    "core",
-    "",
-    "star",
-    "",
-    "star",
-    "",
-    "core",
-    "core",
-    "",
-    "",
-    "dim",
-    "",
-    "",
-    "core",
-  ];
-
   return (
     <span
-      className="pixel-logo grid size-9 shrink-0 grid-cols-7 border-2 border-slate-500/70 bg-[#0a101b] p-1 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] transition group-hover:border-slate-300"
+      className="pixel-logo flex size-9 shrink-0 items-center justify-center bg-[#16c60c] font-black leading-none text-[#071006] transition group-hover:bg-[#20e312]"
       aria-hidden="true"
     >
-      {pixels.map((tone, index) => (
-        <span
-          key={`${tone}-${index}`}
-          className={
-            tone === "core"
-              ? "bg-slate-100"
-              : tone === "star"
-                ? "bg-cyan-200"
-                : tone === "dim"
-                  ? "bg-slate-500"
-                  : "bg-transparent"
-          }
-        />
-      ))}
+      M
     </span>
   );
 }
@@ -120,37 +55,38 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-30 border-b border-white/10 bg-[#070910]/95 backdrop-blur-md transition-transform duration-300 ease-out will-change-transform ${
+      className={`sticky top-0 z-30 border-b border-[#10130f] bg-[#f7f7f2]/95 transition-transform duration-300 ease-out will-change-transform ${
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8">
+      <nav className="mx-auto grid max-w-7xl gap-3 px-5 py-4 sm:px-8 lg:grid-cols-[220px_1fr_auto] lg:items-center">
         <Link href="/" className="group flex shrink-0 items-center gap-3" aria-label="Morvane home">
           <PixelLogo />
-          <span className="text-xl font-black tracking-[0.04em] text-slate-50 transition group-hover:text-white">
+          <span className="text-2xl font-black tracking-[-0.01em] text-[#10130f] transition group-hover:text-[#0b7d11]">
             Morvane
           </span>
         </Link>
 
-        <div className="flex min-w-0 items-center gap-5 overflow-x-auto whitespace-nowrap text-sm font-semibold text-slate-400">
-          <div className="flex items-center gap-5">
+        <div className="flex min-w-0 items-center gap-5 overflow-x-auto whitespace-nowrap text-sm font-black text-[#33382f] lg:justify-center">
+          <div className="flex items-center gap-5 lg:gap-7">
             {navItems.map((item) => (
               <Link
                 key={item}
-                href={`/#${item.toLowerCase().replaceAll(" ", "-")}`}
-                className="transition hover:text-slate-100"
+                href={item === "Latest" ? "/#latest" : `/#${item.toLowerCase().replaceAll(" ", "-")}`}
+                className="transition hover:text-[#0b7d11]"
               >
                 {item}
               </Link>
             ))}
           </div>
-          <Link
-            href="/#newsletter"
-            className="hidden border border-white/10 px-3 py-1.5 text-slate-300 transition hover:border-white/20 hover:bg-white/[0.04] hover:text-slate-100 sm:inline-block"
-          >
-            Subscribe
-          </Link>
         </div>
+
+        <Link
+          href="/#newsletter"
+          className="hidden border border-[#10130f] px-3 py-1.5 text-sm font-black text-[#10130f] transition hover:bg-[#10130f] hover:text-white sm:inline-block"
+        >
+          Subscribe
+        </Link>
       </nav>
     </header>
   );
