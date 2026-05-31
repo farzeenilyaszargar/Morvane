@@ -10,15 +10,18 @@ import {
   useRef,
   useState,
 } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { articles, navItems } from "@/lib/articles";
 
 export function SiteHeader() {
   const router = useRouter();
+  const pathname = usePathname();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const isHomePage = pathname === "/";
+  const showHeaderLogo = !isHomePage || hasScrolled;
 
   const searchResults = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -46,6 +49,10 @@ export function SiteHeader() {
   }, [query]);
 
   useEffect(() => {
+    if (!isHomePage) {
+      return;
+    }
+
     function updateHeader() {
       setHasScrolled(window.scrollY > 180);
     }
@@ -56,7 +63,7 @@ export function SiteHeader() {
     return () => {
       window.removeEventListener("scroll", updateHeader);
     };
-  }, []);
+  }, [isHomePage]);
 
   useEffect(() => {
     if (isSearchOpen) {
@@ -106,7 +113,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className={`group flex h-10 shrink-0 items-center overflow-hidden transition-all duration-500 ease-out ${
-            hasScrolled ? "w-40 opacity-100" : "w-0 opacity-0"
+            showHeaderLogo ? "w-40 opacity-100" : "w-0 opacity-0"
           }`}
           aria-label="Morvane home"
         >
@@ -117,14 +124,14 @@ export function SiteHeader() {
             height={36}
             priority
             className={`h-5 w-32 object-contain transition duration-500 ${
-              hasScrolled ? "translate-x-0" : "-translate-x-8"
+              showHeaderLogo ? "translate-x-0" : "-translate-x-8"
             }`}
           />
         </Link>
 
         <div
           className={`flex min-w-0 items-center justify-center overflow-x-auto whitespace-nowrap text-sm font-black text-white transition-all duration-500 ${
-            hasScrolled ? "gap-5" : "gap-6"
+            showHeaderLogo ? "gap-5" : "gap-6"
           }`}
         >
           {navItems.map((item) => (
