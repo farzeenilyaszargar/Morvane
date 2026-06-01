@@ -7,6 +7,7 @@ const topicLinks = [
   { label: "Venture", href: "/#venture" },
   { label: "AI", href: "/#ai" },
   { label: "Security", href: "/#security" },
+  { label: "Apps", href: "/#apps" },
   { label: "Newsletter", href: "/#newsletter" },
 ];
 

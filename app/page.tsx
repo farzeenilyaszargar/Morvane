@@ -228,7 +228,7 @@ export default function Home() {
       />
       <SiteHeader />
 
-      <section id="latest" className="bg-[#0077C8] text-white">
+      <section id="top-stories" className="bg-[#0077C8] text-white">
         <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:py-10">
           <div className="mb-12 flex justify-center">
             <Image
@@ -257,7 +257,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:py-20">
+      <section
+        id="latest"
+        className="mx-auto grid max-w-7xl scroll-mt-28 gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:py-20"
+      >
         <div>
           <SectionTitle title="Latest News" href="/#latest" />
           {visibleLatestArticles.map((article) => (
@@ -284,7 +287,10 @@ export default function Home() {
             <PopularList articles={popularArticles} />
           </div>
 
-          <div id="newsletter" className="border border-[#10130f] bg-[#10130f] p-5 text-white">
+          <div
+            id="newsletter"
+            className="scroll-mt-28 border border-[#10130f] bg-[#10130f] p-5 text-white"
+          >
             <p className="text-sm font-black uppercase tracking-[0.1em] text-[#00A2FF]">
               Newsletters
             </p>
@@ -315,25 +321,36 @@ export default function Home() {
         </aside>
       </section>
 
-      <section id="venture" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+      <section
+        id="venture"
+        className="mx-auto max-w-7xl scroll-mt-28 px-5 py-16 sm:px-8 lg:py-20"
+      >
+        <span id="startups" className="block scroll-mt-28" aria-hidden="true" />
         <SectionTitle title="Venture & Startups" href="/#venture" />
-        <div id="startups" className="grid gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           {ventureArticles.slice(0, 4).map((article) => (
             <SmallCard key={article.slug} article={article} />
           ))}
         </div>
       </section>
 
-      <section id="ai" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+      <section
+        id="ai"
+        className="mx-auto max-w-7xl scroll-mt-28 px-5 py-16 sm:px-8 lg:py-20"
+      >
+        <span id="apps" className="block scroll-mt-28" aria-hidden="true" />
         <SectionTitle title="AI, Apps & Infrastructure" href="/#ai" />
-        <div id="apps" className="grid gap-x-8 gap-y-10 lg:grid-cols-3">
+        <div className="grid gap-x-8 gap-y-10 lg:grid-cols-3">
           {aiArticles.slice(0, 3).map((article) => (
             <SmallCard key={article.slug} article={article} />
           ))}
         </div>
       </section>
 
-      <section id="security" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+      <section
+        id="security"
+        className="mx-auto max-w-7xl scroll-mt-28 px-5 py-16 sm:px-8 lg:py-20"
+      >
         <SectionTitle title="Security, Hardware & Systems" href="/#security" />
         <div className="grid gap-x-8 gap-y-10 lg:grid-cols-3">
           {[articles[7], articles[8], articles[11]].map((article) => (

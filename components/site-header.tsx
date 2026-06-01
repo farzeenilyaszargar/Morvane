@@ -13,6 +13,15 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 import { articles, navItems } from "@/lib/articles";
 
+const navLinks: Record<string, string> = {
+  Latest: "/#latest",
+  Startups: "/#startups",
+  Venture: "/#venture",
+  AI: "/#ai",
+  Security: "/#security",
+  Apps: "/#apps",
+};
+
 export function SiteHeader() {
   const router = useRouter();
   const pathname = usePathname();
@@ -145,7 +154,7 @@ export function SiteHeader() {
           {navItems.map((item) => (
             <Link
               key={item}
-              href={item === "Latest" ? "/#latest" : `/#${item.toLowerCase().replaceAll(" ", "-")}`}
+              href={navLinks[item] ?? "/#latest"}
               className="transition hover:text-[#7ACCFF]"
             >
               {item}
