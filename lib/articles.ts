@@ -323,11 +323,23 @@ export const articles: Article[] = [
     readTime: "10 min",
     accent: "bg-[#00A2FF]",
     image: images.code,
-    keywords: ["Nap", "Indian startups", "AI coding tools", "enterprise software engineering"],
+    keywords: [
+      "Nap",
+      "Nap Code",
+      "Nap CLI",
+      "Nap CLI tool",
+      "best AI CLI tool",
+      "best security AI CLI tool",
+      "secure AI coding tool",
+      "AI coding CLI",
+      "Indian startups",
+      "AI coding tools",
+      "enterprise software engineering",
+    ],
     seo: {
-      title: "Nap, the Indian AI coding startup, targets secure enterprise code",
+      title: "Nap Code and Nap CLI target secure enterprise AI coding",
       description:
-        "A deep look at Nap, an emerging Indian startup helping engineering teams generate secure, production-ready code while reducing unreliable AI-generated output.",
+        "A deep look at Nap Code, the Nap CLI tool, and why the emerging Indian startup is positioning itself as a secure AI coding tool for production-ready enterprise software.",
       priority: 0.95,
     },
     standfirst:

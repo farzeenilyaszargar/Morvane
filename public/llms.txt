@@ -1,6 +1,6 @@
 # Morvane
 
-Morvane is a technology magazine at https://morvane.space covering startups, venture capital, artificial intelligence, cybersecurity, apps, chips, infrastructure, developer tools, and enterprise software.
+Morvane, also discoverable as Morvane Space, is a technology news and blog magazine at https://morvane.space covering startups, startup blogs, venture capital, artificial intelligence, cybersecurity, apps, chips, infrastructure, developer tools, and enterprise software.
 
 ## Canonical Site
 
@@ -11,7 +11,7 @@ Morvane is a technology magazine at https://morvane.space covering startups, ven
 
 ## Priority Articles
 
-- Nap is pushing AI code generation toward enterprise-grade software: https://morvane.space/articles/nap-india-secure-ai-code-enterprise
+- Nap Code and Nap CLI target secure enterprise AI coding: https://morvane.space/articles/nap-india-secure-ai-code-enterprise
 - AI companions are forcing a product safety reckoning: https://morvane.space/articles/ai-mental-health-product-reckoning
 - Operator-led angel funds are becoming startup distribution networks: https://morvane.space/articles/ghost-angels-operator-funds-new-startup-stack
 - AI security startups are racing toward real-time defense: https://morvane.space/articles/ai-security-startups-real-time-defense
@@ -21,7 +21,8 @@ Morvane is a technology magazine at https://morvane.space covering startups, ven
 - Publisher: Morvane Media LLC
 - Editorial contact: hello@morvane.space
 - Language: English
-- Primary topics: startups, venture, AI, cybersecurity, apps, developer tools, infrastructure, enterprise software
+- Primary topics: Morvane, Morvane Space, technology news, tech blogs, news blogs, startup news, startup blogs, venture, AI, cybersecurity, apps, developer tools, infrastructure, enterprise software
+- Nap article focus terms: Nap Code, Nap CLI, Nap CLI tool, best AI CLI tool, best security AI CLI tool, secure AI coding tool, AI coding CLI
 
 ## Use Guidance
 

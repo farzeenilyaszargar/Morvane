@@ -10,7 +10,13 @@ const jsonLd = {
   "@type": ["CollectionPage", "Blog"],
   "@id": `${siteConfig.url}/#home`,
   name: siteConfig.name,
+  alternateName: [siteConfig.domain, "Morvane Space"],
   description: siteConfig.description,
+  keywords: siteConfig.topics.join(", "),
+  about: siteConfig.topics.map((topic) => ({
+    "@type": "Thing",
+    name: topic,
+  })),
   url: siteConfig.url,
   inLanguage: siteConfig.language,
   isPartOf: {

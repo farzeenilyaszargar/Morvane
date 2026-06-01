@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Morvane | Technology, AI, Startup and Venture News",
+    default: "Morvane Space | Technology News, Startup Blogs and AI Coverage",
     template: "%s | Morvane",
   },
   applicationName: siteConfig.name,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Morvane | Technology, AI, Startup and Venture News",
+    title: "Morvane Space | Technology News, Startup Blogs and AI Coverage",
     description: siteConfig.shortDescription,
     type: "website",
     url: siteConfig.url,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morvane | Technology, AI, Startup and Venture News",
+    title: "Morvane Space | Technology News, Startup Blogs and AI Coverage",
     description: siteConfig.shortDescription,
     images: [siteConfig.coverImage],
   },
@@ -73,6 +73,8 @@ export const metadata: Metadata = {
   other: {
     "theme-color": siteConfig.themeColor,
     "msapplication-TileColor": siteConfig.themeColor,
+    news_keywords:
+      "Morvane, Morvane Space, technology news, tech blogs, startup news, startup blogs, AI news, venture capital, cybersecurity news",
   },
 };
 
