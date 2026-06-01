@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Morvane Space | Technology News, Startup Blogs and AI Coverage",
+    default: "Morvane",
     template: "%s | Morvane",
   },
   applicationName: siteConfig.name,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Morvane Space | Technology News, Startup Blogs and AI Coverage",
+    title: "Morvane",
     description: siteConfig.shortDescription,
     type: "website",
     url: siteConfig.url,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morvane Space | Technology News, Startup Blogs and AI Coverage",
+    title: "Morvane",
     description: siteConfig.shortDescription,
     images: [siteConfig.coverImage],
   },
