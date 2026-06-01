@@ -204,6 +204,8 @@ function PopularList({ articles: list }: { articles: (typeof articles)[number][]
 export default function Home() {
   const [lead, ...topStories] = featuredArticles;
   const latestArticles = articles.slice(3, 11);
+  const visibleLatestArticles = latestArticles.slice(0, 4);
+  const moreLatestArticles = latestArticles.slice(4);
   const ventureArticles = articles.filter((article) =>
     ["Venture", "Startups", "Defense Tech"].includes(article.category),
   );
@@ -252,9 +254,22 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:py-20">
         <div>
           <SectionTitle title="Latest News" href="/#latest" />
-          {latestArticles.map((article) => (
+          {visibleLatestArticles.map((article) => (
             <LatestRow key={article.slug} article={article} />
           ))}
+          {moreLatestArticles.length > 0 ? (
+            <details className="group">
+              <summary className="mt-3 inline-flex cursor-pointer list-none items-center bg-[#0077C8] px-5 py-3 text-sm font-black uppercase tracking-[0.08em] text-white transition hover:bg-[#10130f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0077C8] [&::-webkit-details-marker]:hidden">
+                <span className="group-open:hidden">Read more</span>
+                <span className="hidden group-open:inline">Show fewer</span>
+              </summary>
+              <div className="mt-3">
+                {moreLatestArticles.map((article) => (
+                  <LatestRow key={article.slug} article={article} />
+                ))}
+              </div>
+            </details>
+          ) : null}
         </div>
 
         <aside className="space-y-14">
