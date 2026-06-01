@@ -8,7 +8,7 @@ export const siteConfig = {
   themeColor: "#0077C8",
   email: "hello@morvane.space",
   description:
-    "Morvane is a technology news and blog magazine at morvane.space covering startups, venture, AI, cybersecurity, apps, chips, infrastructure, and the companies shaping modern software.",
+    "Morvane is a technology news magazine at morvane.space covering startups, venture, AI, cybersecurity, apps, chips, infrastructure, and modern software.",
   shortDescription: "Technology news, startup blogs, AI coverage, and venture analysis.",
   logo: "/logo.svg",
   logoMark: "/logo-mark.svg",
