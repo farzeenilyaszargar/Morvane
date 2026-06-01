@@ -116,7 +116,7 @@ export function SiteHeader() {
           href="/"
           className={`flex h-10 shrink-0 items-center overflow-hidden transition-[width,opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             showHeaderLogo
-              ? "static w-40 translate-x-0 opacity-100"
+              ? "static w-32 translate-x-0 opacity-100"
               : "absolute left-0 w-0 -translate-x-3 opacity-0"
           }`}
           aria-label="Morvane home"
@@ -126,10 +126,10 @@ export function SiteHeader() {
           <Image
             src="/logo.svg"
             alt="Morvane"
-            width={140}
-            height={36}
+            width={120}
+            height={31}
             priority
-            className={`h-5 w-32 object-contain transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            className={`h-4 w-28 object-contain transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
               showHeaderLogo ? "translate-x-0" : "-translate-x-8"
             }`}
           />
